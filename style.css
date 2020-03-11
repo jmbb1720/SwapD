@@ -49,6 +49,16 @@ body {
     cursor: pointer; 
 }
 
+/* Style the search bar in nav bar */
+.nav-bar input[type=text] {
+    float: right;
+    padding: 5px;
+    border: none;
+    margin-top: 12px;
+    margin-right: 18px;
+    font-size: 17px;
+  }
+  
 /* Source: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
 
 .dropdown {
@@ -136,6 +146,7 @@ body {
 }
 
 /* content coding */
+
 .content img {
     float: bottom;
 }
@@ -151,7 +162,30 @@ body {
 }
 
 .tiles {
-    padding: 50px 80px 80px 120px;
+    /* background-color: rgb(236, 236, 236); */
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+#tile-1 {
+    padding: 50px 10px 30px 110px;
+    width: 300px;
+    float: left;
+}
+
+#tile-2 {
+    padding: 50px 10px 30px 100px;
+    /* border-bottom: 1px solid rgb(151, 151, 151); */
+    float: left;
+}
+
+#tile-3 {
+    padding: 50px 10px 30px 100px;
+    /* border-bottom: 1px solid rgb(151, 151, 151); */
+    float: left;
 }
 
 #post {
