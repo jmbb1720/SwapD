@@ -25,6 +25,8 @@ body {
     height: 56px;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    float: left;
+    margin-bottom: 30px;
 }
 
 .nav-bar ul{
@@ -117,12 +119,20 @@ body {
     display: block;
   }
   
+.side-bar {
+    float: right;
+    position: relative;
+    bottom: 1280px;
+    right: 200px;
+}
 .content {
     background-color: white;
-    width: 100%;
+    width: 80%;
     height: 100%;
     color: #202020;;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    float: left;
+    margin-right: 15%;
 }
 
 #logo {
@@ -161,30 +171,58 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.tiles {
+.containtile {
+    width: 840px;
+    display: grid;
+    grid-gap: 30px;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    /* grid-template-rows: 1fr 2fr; */
+    justify-items: end;
+}
+
+.tile {
     /* background-color: rgb(236, 236, 236); */
-    display: flex;
-    flex-direction: row;
-    flex: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
+    /* display: inline-block; */
+    cursor: pointer;
 }
 
 #tile-1 {
-    padding: 50px 10px 30px 110px;
-    width: 300px;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    justify-self: end;
+    padding: 50px 10px 30px 150px;
+    /* border-bottom: 1px solid rgb(151, 151, 151); */
     float: left;
 }
 
 #tile-2 {
     padding: 50px 10px 30px 100px;
-    /* border-bottom: 1px solid rgb(151, 151, 151); */
+    width: 300px;
     float: left;
 }
 
 #tile-3 {
-    padding: 50px 10px 30px 100px;
+    padding: 50px 10px 30px 150px;
     /* border-bottom: 1px solid rgb(151, 151, 151); */
+    float: left;
+}
+
+#tile-4 {
+    padding: 50px 10px 30px 100px;
+    width: 300px;
+    float: left;
+}
+
+#tile-5 {
+    padding: 50px 10px 30px 150px;
+    /* border-bottom: 1px solid rgb(151, 151, 151); */
+    float: left;
+}
+
+#tile-6 {
+    padding: 50px 10px 30px 100px;
+    width: 300px;
     float: left;
 }
 
@@ -212,6 +250,13 @@ body {
 .button-post1:hover {
     background-color: #b81c36;
     color: white;
+}
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  /* @media screen and (max-width: 800px) {
+    .tiles {
+        flex-direction: column;
+    } */
 }
 
 
