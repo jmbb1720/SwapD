@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: auto 0;
 }
 
 /* center in the middle */
@@ -17,6 +17,10 @@ body {
 
 #home {
     margin-left: 100px;
+}
+
+.push-right {
+    margin-left: auto;
 }
 
 .nav-bar {
@@ -51,6 +55,11 @@ body {
     cursor: pointer; 
 }
 
+.nav-bar ul li a{
+    color: white;
+    text-decoration: none;
+}
+
 /* Style the search bar in nav bar */
 .nav-bar input[type=text] {
     float: right;
@@ -80,6 +89,11 @@ body {
     font-family: inherit;
     margin: 0;
   }
+
+.dropdown .dropbtn a{
+    color: white;
+    text-decoration: none;
+}
   
   /* Style the dropdown content (hidden by default) */
 .dropdown-content {
@@ -171,7 +185,7 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.containtile {
+.grid-wrapper {
     width: 840px;
     display: grid;
     grid-gap: 30px;
@@ -253,10 +267,22 @@ body {
 }
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  /* @media screen and (max-width: 800px) {
-    .tiles {
-        flex-direction: column;
-    } */
+  @media only screen and (max-width: 1340px) {
+    .nav-bar {
+        font-size: 0.9em;
+        padding 0px;
+    }
+
+    .nav-bar ul li{
+        padding 10px;
+    }
+}
+ 
+  @media only screen and (max-width: 800px) {
+    /* .containtile {
+        display: flex;
+        flex-direction: column; */
+    }
 }
 
 
