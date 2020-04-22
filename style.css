@@ -39,7 +39,7 @@ body {
     list-style: none;
 }
 
-.nav-bar ul li{
+.nav-bar li{
     float: left;
     font-size: 1.0em;
     position: relative;
@@ -49,7 +49,7 @@ body {
     padding: 19px;
 }
 
-.nav-bar ul li:hover{
+.nav-bar li:hover{
     background-color:  #c8102e; /* Dickinson's Red */
     color: #000000;
     cursor: pointer; 
@@ -270,11 +270,17 @@ body {
   @media only screen and (max-width: 1340px) {
     .nav-bar {
         font-size: 0.9em;
-        padding 0px;
+        padding: 0px;
     }
 
     .nav-bar ul li{
-        padding 10px;
+        float: left;
+        font-size: 1.0em;
+        position: relative;
+        /* left: 19px; */
+        /* border: 1px solid white; */
+        display: block;
+        padding: 19px;
     }
 }
  
@@ -282,7 +288,7 @@ body {
     /* .containtile {
         display: flex;
         flex-direction: column; */
-    }
-}
+} 
+
 
 
