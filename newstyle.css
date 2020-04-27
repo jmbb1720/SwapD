@@ -38,12 +38,13 @@ nav {
     list-style: none;
 }
 
-.main-nav li:hover{
-    background-color:  #c8102e; /* Dickinson's Red */
-    color: #000000;
+/* .main-nav li:hover{
+    background-color:  #c8102e;  */
+    /* Dickinson's Red */
+    /* color: #000000;
     cursor: pointer;
     padding: 14px; 
-}
+} */
 
 .main-nav a {
     color: white;
