@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SwapD</title>
+    <link rel="stylesheet" type="text/css" href="submit-style.css">
+</head>
+
+<body>
+    <div class="top-bar sticky">
+        <div class="fixed-width">
+            <a href="file:///Users/ngando1720/Documents/SwapD/newindex.html" id="logo">
+                <img src="" width="90" height="50" alt="SwapD-logo">
+                <!-- <div id="name">SwapD</div> -->
+            </a>
+            <div id="slogan">Connecting the community one skill at a time</div>
+        </div>
+    </div> <!-- top-bar -->
+
+    <nav class="zone black">
+        <ul class="main-nav">
+            <li id="home"><a href="file:///Users/ngando1720/Documents/SwapD/newindex.html">Home</a></li>
+            <li id="home">
+                <div class="dropdown">
+                    <!--Dropdown menu-->
+                    <button class="drop-button">Arts</button>
+                    <div class="dropdown-content">
+                        <a href="arts-studio.html">Studio Art</a>
+                        <a href="arts.html">Art History</a>
+                        <a href="arts.html">Art Business</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home">
+                <div class="dropdown">
+                    <button class="drop-button">Academics</button>
+                    <div class="dropdown-content">
+                        <a href="">Peer Tutor</a>
+                        <a href="">Language</a>
+                        <a href="">Study Strategy</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home">
+                <div class="dropdown">
+                    <button class="drop-button">Sports</button>
+                    <div class="dropdown-content">
+                        <a href="sports-tennis.html">Tennis</a>
+                        <a href="sports.html">Basketball</a>
+                        <a href="sports.html">Badminton</a>
+                        <a href="sports.html">Baseball</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home">
+                <div class="dropdown">
+                    <button class="drop-button">Technology</button>
+                    <div class="dropdown-content">
+                        <a href="tech-program.html">Programming</a>
+                        <a href="tech.html">A</a>
+                        <a href="tech.html">B</a>
+                        <a href="tech.html">C</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home">
+                <div class="dropdown">
+                    <button class="drop-button">Fashion</button>
+                    <div class="dropdown-content">
+                        <a href="">Sewing</a>
+                        <a href="">Fashion Illustrating</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home">
+                <div class="dropdown">
+                    <button class="drop-button">Culinary</button>
+                    <div class="dropdown-content">
+                        <a href="">Cooking</a>
+                        <a href="">Food Tour</a>
+                    </div>
+                </div>
+            </li>
+            <li id="home"><a href="">Career Tips</a></li>
+            <li id="home"><a href="">Other</a></li>
+            <li id="home"><a href="">Get Started</a></li>
+            <li id="submit-post">
+                <button class="submit-post-button"><a
+                        href="file:///Users/ngando1720/Documents/SwapD/submit-post.html">Submit Post</a></button>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <script scr="javascript.js"></script>
+
+    <div class="zone gray grid-wrapper">
+        <form action="/action_page.php" method="get" target="_blank">
+            <label class="title" for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br> <!-- first name -->
+            <label class="title" for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br> <!-- last name -->
+            <label class="title" for="email">Dickinson email:</label>
+            <input style=width:180px; type="text" id="lname" name="lname" placeholder="Enter your Dickinson email">
+            <!-- email -->
+            <p id="note">(This will not be made public. It is only used for verification purposes)</p>
+            <label class="title" for="post">Post title:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your post title"><br><br> <!-- post title -->
+            <label class="title" for="desc">Description:</label><br><br>
+            <textarea rows="6" cols="100" name="comment" form="usrform">Describe your post...</textarea><br><br>
+            <!-- description -->
+            <label class="title" for="image">Image Upload:</label>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit"><br><br> <!-- image upload -->
+            <div class="dropdown">
+                <label for="lname">Category:</label>
+                <button class="dropbtn">Choose a category
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Arts</a>
+                    <a href="#">Academic</a>
+                    <a href="#">Sports</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Culinary</a>
+                    <a href="#">Others</a>
+                </div> <!-- category -->
+            </div><br></br>
+            <label class="title" for="tags">Tags:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your tags"><br></br> <!-- tags -->
+            <label class="title" for="verif">Verification:</label>
+            <p id="note">Please answer this question: When was Dickinson College founded?</p>
+            <input type="answer" id="lname" name="lname" placeholder="Enter your answer"><br></br> <!-- verification -->
+            <input type="submit" value="Submit"><br></br> <!-- submit -->
+        </form>
+    </div> <!-- tile -->
+
+    <!-- <div class="zone red">Side Bar</div> -->
+    <footer class="zone yellow">SwapD</footer>
+</body>
+
+</html>
