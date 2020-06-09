@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     }
 
     console.log('Form submitted!')
-    fetch('https://localhost:3000/posts', {method: 'post', body: post}).then((res) => {
+    fetch('/posts', {method: 'post', body: post}).then((res) => {
         return res.json()
     }).then((response) => {
         console.log(response)
