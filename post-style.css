@@ -246,6 +246,32 @@ footer {
     margin-bottom: 10px;
 }
 
+.show-comment {
+    border: none;
+}
+
+.individual-comment {
+    background-color: grey;
+    opacity: 50%;
+    margin: 5px 0;
+}
+
+.comment-name {
+    font-size: 17px;
+    font-weight: bold;
+    transition: 150ms;
+}
+
+.comment-name:hover {
+    color: #c8102e; /*hover when accessing user's account*/
+    cursor: pointer;
+}
+
+.comment-main, .comment-reply {
+    padding: 0 10px 10px 10px;
+    font-size: 15px;
+}
+
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media only screen and (max-width: 1024px) {
     .main-nav {
