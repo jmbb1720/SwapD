@@ -10,16 +10,18 @@ const publicDir =  path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 //this file is purely for the web server
 
+app.set('view engine', 'pug')
 app.set('views', viewsPath)
 app.use(express.json())
 app.use(express.static(publicDir))
 
 app.get('', (req, res) => {
-    res.render('submit-post.html')
+    res.sendFile(viewsPath + '/submit-post.html')
 })
 
 app.post('/posts', (req,res) => {
     const post = new Post(req.body)
+    console.log(req.body)
     post.save().then(() => {
         res.status(201).send(post)
     }).catch((error) => {

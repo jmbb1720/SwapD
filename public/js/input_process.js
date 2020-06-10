@@ -7,17 +7,24 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const post = {
-        firstName : document.getElementById('fname').textContent,
-        lastName: document.getElementById('lname').textContent,
-        dsonEmail: document.getElementById('email').textContent,
-        title: document.getElementById('postTit').textContent,
-        description: document.getElementById('desc').textContent,
+        firstName : document.getElementById('fname').value,
+        lastName: document.getElementById('lname').value,
+        dsonEmail: document.getElementById('email').value,
+        title: document.getElementById('postTit').value,
+        description: document.getElementById('desc').value,
         category: document.getElementById('categories').value,
-        tags: document.getElementById('tags').textContent,
+        tags: document.getElementById('tags').value,
     }
 
-    console.log('Form submitted!')
-    fetch('/posts', {method: 'post', body: post}).then((res) => {
+    // console.log(post)
+    // console.log('Form submitted!')
+    // console.log(JSON.stringify(post))
+    fetch('/posts', 
+    {
+        method: 'post', 
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(post)
+    }).then((res) => {
         return res.json()
     }).then((response) => {
         console.log(response)
