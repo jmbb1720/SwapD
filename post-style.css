@@ -251,9 +251,11 @@ footer {
 }
 
 .individual-comment {
-    background-color: grey;
-    opacity: 50%;
+    /*background-color: grey;*/
+    /*opacity: 50%;*/
     margin: 5px 0;
+    border: 2px solid black;
+    padding: 20px;
 }
 
 .comment-name {
