@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
         lastName: document.getElementById('lname').value,
         dsonEmail: document.getElementById('email').value,
         title: document.getElementById('postTit').value,
+        title_lower: document.getElementById('postTit').value.toLowerCase(),
         description: document.getElementById('desc').value,
         category: document.getElementById('categories').value,
         tags: document.getElementById('tags').value,
