@@ -15,6 +15,10 @@ app.use(express.json())
 app.use(express.static(publicDir))
 app.use(postRouter)
 
+app.get('', (req, res) => {
+    res.sendFile(viewsPath + '/submit-post.html')
+})
+
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })

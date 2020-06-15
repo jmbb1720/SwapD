@@ -2,10 +2,6 @@ const express = require('express')
 const Post = require('../models/posts.js')
 const router = new express.Router()
 
-router.get('', (req, res) => {
-    res.sendFile(viewsPath + '/submit-post.html')
-})
-
 router.post('/posts', async (req,res) => {
     const post = new Post(req.body)
     try {
