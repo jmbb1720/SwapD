@@ -26,10 +26,11 @@ const Post = mongoose.model('Post', {
     title: {
         type: String,
         required: true,
-        // trim: true   
+        trim: true   
     },
     title_lower: {
-        type: String
+        type: String,
+        trim: true
     },
     description: {
         type: String,
