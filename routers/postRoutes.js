@@ -41,9 +41,20 @@ After posting, how do we get every display to update with new post?
 maybe autorefresh in background?
 */
 router.patch('/posts/:id', async (req, res) => {
-    // const updates = Object.keys(req.body)
+    const updates = Object.keys(req.body)
     try {
-        const post = await Post.findByIdAndUpdate(req.params.id, req.body, {runValidators: true, new: true})
+        // This is the traditional method of updating in mongoose
+        const post = await Post.findById(req.params.id)
+
+        //apply each update, then save. It already does validation for us
+        updates.forEach((update) => {
+            post[update] = req.body[update]
+        })
+
+        await post.save()
+
+        // findbyidandupdate bypasses the middleware
+        // const post = await Post.findByIdAndUpdate(req.params.id, req.body, {runValidators: true, new: true})
         res.send(post)
     }
     catch (e) {

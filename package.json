@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/anthonyhvo12/SwapD#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "mongodb": "^3.5.8",
     "mongoose": "^5.9.1",

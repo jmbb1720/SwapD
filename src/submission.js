@@ -4,6 +4,7 @@ require('../db/mongoose.js')
 const app = express()
 const port = process.env.PORT
 const postRouter = require('../routers/postRoutes.js')
+const userRouter = require('../routers/userRoutes.js')
 
 // define paths for express config
 const publicDir =  path.join(__dirname, '../public')
@@ -14,6 +15,7 @@ app.set('views', viewsPath)
 app.use(express.json())
 app.use(express.static(publicDir))
 app.use(postRouter)
+app.use(userRouter)
 
 app.get('', (req, res) => {
     res.sendFile(viewsPath + '/submit-post.html')
