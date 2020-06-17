@@ -25,6 +25,10 @@ nav {
     color: pink;
 }
 
+.nav-bar {
+    background-color: black;
+}
+
 .main-nav {
     align-items: center;
     margin: 0;
@@ -110,7 +114,17 @@ nav {
 .dropdown-content a:hover {background-color: orange; color:purple}
   
 .dropdown:hover .dropdown-content {display: block;}
-  
+
+.submit-post-button {
+    background-color: #c8102e;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1em;
+    cursor: pointer;
+}
 
 #logo {
     float: left;
