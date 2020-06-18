@@ -19,7 +19,7 @@ footer {
 /* || UTILITIES */
 /* center in the middle */
 .fixed-width {
-    width: 1000px;
+    width: 1250px;
     /* margin: 0 auto; */
 }
 
@@ -165,7 +165,7 @@ nav {
 }
 
 .submit-post-button:hover {
-    background-color: #b81c36;
+    opacity: 0.9;
     color: black;
 }
 
@@ -210,6 +210,40 @@ nav {
  }
 
 /* || STORE PAGES */
+.logo-slogan-and-signup-container {
+    display: flex;
+}
+
+.signup-and-login-container {
+    display: flex;
+}
+
+.signup-and-login-button {
+  padding: 0px 20px;
+  margin: 15px 0 45px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#log-in {
+    background-color:  #b81c36;
+    color: white;
+}
+
+#sign-up:hover {
+    opacity: 0.9;
+}
+
+#log-in:hover {
+    opacity: 0.9;
+}
+
+.signup-and-login-button a {
+    text-decoration: none;
+    color: #b81c36;
+}
+
 /*navigation bar setting, han*/
 #home{
     float: left;

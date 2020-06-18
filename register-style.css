@@ -5,10 +5,6 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-h1 {
-    line-height: 1em;
-}
-
 footer {
     text-align: center;
     background-color: #202020;
@@ -26,11 +22,13 @@ footer {
 /* GRID */
 .grid-wrapper {
     display: grid;
-    /* grid-gap: 20px;  */
-    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     padding: 0px 80px 0px 80px;
     line-height: 0.5em;
+    justify-items: center;
+    /* grid-gap: 20px;  */
+    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+    
 }
 
 /* || SITEWIDE */
@@ -136,6 +134,7 @@ nav {
     font-size: 0.55em;
     font-style: italic;
     color: rgb(99, 99, 99);
+    line-height: 1em;
 }
 
 .icon-posted-by-someone {
@@ -163,6 +162,11 @@ nav {
     cursor: pointer; 
 }
 
+.submit-post-button:hover {
+    opacity: 0.9;
+    color: black;
+}
+
 .burger {
     display: none;
 }
@@ -174,14 +178,38 @@ nav {
     margin: 5px;
 }
 
+.tile h1 {
+    font-size: 1.5em;
+}
+
+.post-image {
+    width: 250px;
+    height: 130px;
+}
+
+.box > img{
+    width: 100%;
+}
+
+.box {
+   background-color: white; 
+   padding: 20px 20px 20px 20px;
+   margin: 20px;
+   transition: 1s;
+}
+
 /*box hover: transform*/
 .box:hover {
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
     -webkit-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
     -moz-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
     -o-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
     box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
  }
+
+ .title {
+    font-style: bold;
+}
 
 /* || STORE PAGES */
 .logo-slogan-and-signup-container {
@@ -217,6 +245,40 @@ nav {
     text-decoration: none;
     color: #b81c36;
 }
+
+.first-last-name-container {
+    display: flex;
+    width: 100%;
+}
+
+#fname {
+    margin-right: 10px;
+}
+
+input {
+    padding: 6px 1px;
+    margin: 4px 0px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+}
+
+#submit-register {
+    width: 50%;
+}
+
+.register-container {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#learner-instructor {
+    padding: 5px;
+}
+
 /*navigation bar setting, han*/
 #home{
     float: left;
@@ -252,57 +314,13 @@ nav {
     color: #202020;
 }
 
-.tile h1 {
-    font-size: 1.5em;
-}
-
-.tile-align {
+.dropdown-category {
     display: flex;
-    padding: 20px;
 }
 
-.big-box {
-   background-color: white; 
-   padding: 20px 20px 20px 20px;
-   margin: 0px 30px 0px 0px;
-   transition: 1s;
-}
-
-#big-box-top {
-    margin-bottom:30px;
-}
-
- #big-box-bottom {
-    display: flex;
-    flex-direction: column;
- }
-
-.side-box {
-    background-color: white; 
-    padding: 20px 20px 20px 20px;
-    transition: 1s;
- }
-
- #side-box-top {
-    margin: 0px 0px 30px 0px;
- }
-
- .button-comment {
-    height: 40px;
-    width: 140px;
-    background-color: #c8102e; /* Dickinson's Red */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+#note {
+    font-style: italic;
     font-size: 0.8em;
-    margin: 15px 0px 0px 0px;
-    cursor: pointer;    
-  }
-
-.button-comment:hover {
-    background-color: #b81c36;
-    color: black;
 }
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
