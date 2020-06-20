@@ -194,6 +194,7 @@ nav {
 
 .big-post{
     padding: 100px 100px 100px 100px
+    position: relative;
 }
 
 .big-post img{
@@ -287,6 +288,34 @@ footer {
     padding: 0 10px 10px 10px;
     font-size: 15px;
 }
+
+/*Delete Post Button*/
+.modal {
+    display: none;
+    position: absolute;
+    padding: 10px 20px;
+    width: 100%;
+}    
+
+.modal-content {
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    width: 40%;
+    margin: auto;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.modal-content h3 {
+    text-align: center;   
+}
+
+.confirmation-button .button-post1 {
+    width:48%;
+    margin: 0 0.5%;
+}
+
+
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media only screen and (max-width: 1024px) {
