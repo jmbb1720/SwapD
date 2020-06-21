@@ -27,6 +27,16 @@ router.get('/users', async (req, res) => {
     }
 })
 
+router.get('/users/login', async (req, res) => {
+    try {
+        const user = await User.findByCredentials(req.body.dsonEmail, req.body.password)
+        res.status(200).send(user)
+    }
+    catch (e) {
+        res.status(400).send(e) //error not being logged to console
+    }
+})
+
 router.patch('/users/:id', async (req, res) => {
     const updates = Object.keys(req.body)
     try {

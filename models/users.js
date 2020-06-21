@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
     },
     dsonEmail: {
         type: String,
+        unique: true,
         validate(value) {
             if (!validator.isEmail(value) || !value.includes('@dickinson.edu')) {
                 throw new Error("Invalid email!")
@@ -35,6 +36,29 @@ const userSchema = new mongoose.Schema({
         }
     }
 })
+
+//change res.send to return//throw error
+userSchema.statics.findByCredentials = async (dsonEmail, password) => {
+    try {
+        // console.log(dsonEmail)
+        const user = await User.findOne({dsonEmail})
+        // console.log(user)
+        if (!user) {
+            throw new Error('Unable to login!')
+        }
+        else {
+            const hashedPass = await bcrypt.hash(password, 8)
+            if (hashedPass != user.password) {
+                // console.lo
+                throw new Error('Unable to login!')
+            }
+            return user
+        }
+    }
+    catch (e) {
+        throw e
+    }
+}
 
 userSchema.pre('save', async function (next) {
     const user = this
