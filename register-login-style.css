@@ -221,30 +221,38 @@ nav {
 }
 
 .signup-and-login-button {
-  padding: 0px 20px;
-  margin: 15px 0 45px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+    padding: 0px 20px;
+    margin: 15px 0 45px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #sign-up:hover {
+      opacity: 0.9;
+  }
+  
+  .signup-and-login-button a {
+      text-decoration: none;
+      color: white;
+  }
+  
+  #login-button {
+      background-color: #b81c36;
+  }
+  
+  #sign-up {
+      color: #b81c36;
+  }
+  
+  #log-in:hover {
+      opacity: 0.9;
+      color: white;
+  }
 
-#log-in {
-    background-color:  #b81c36;
-    color: white;
-}
-
-#sign-up:hover {
-    opacity: 0.9;
-}
-
-#log-in:hover {
-    opacity: 0.9;
-}
-
-.signup-and-login-button a {
-    text-decoration: none;
-    color: #b81c36;
-}
+ #forgot-your-pw {
+     font-size: 0.8em;
+ }
 
 .first-last-name-container {
     display: flex;
