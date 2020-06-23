@@ -174,6 +174,13 @@ nav {
     margin: 5px;
 }
 
+.box {
+   background-color: white; 
+   /* padding: 20px 20px 20px 20px; */
+   margin: 15px;
+   transition: 1s;
+}
+
 /*box hover: transform*/
 .box:hover {
     /* transform: scale(1.1); */
@@ -262,33 +269,61 @@ nav {
 
 .tile-align {
     display: flex;
-    padding: 20px;
+    padding: 15px;
 }
 
-.big-box {
+.left-side-tile {
+    display: grid;
+}
+
+.big-box-left {
    background-color: white; 
-   padding: 20px 20px 20px 20px;
-   margin: 0px 30px 0px 0px;
+   padding: 25px;
    transition: 1s;
+   line-height: 0.8em;
+}   
+
+#avatar {
+    height: 20em;
+    width: 30em;
 }
 
-#big-box-top {
-    margin-bottom:30px;
+.general-info {
+    opacity: 0.7;
+    font-style: italic;
 }
 
- #big-box-bottom {
+.description-info {
+    line-height: 1.1em;
+    font-size: 0.9em;
+}
+
+.icon-contact-container {
     display: flex;
-    flex-direction: column;
- }
+}
+
+.icon-contact {
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+.icon-contact:hover {
+    opacity: 0.75;
+}
+
+.side-box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 40px 0px 40px;
+    line-height: 0.5em;
+    justify-self: center;
+}
 
 .side-box {
     background-color: white; 
     padding: 20px 20px 20px 20px;
     transition: 1s;
- }
-
- #side-box-top {
-    margin: 0px 0px 30px 0px;
  }
 
  .button-comment {
