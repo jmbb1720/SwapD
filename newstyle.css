@@ -226,22 +226,26 @@ nav {
   width: 100%;
 }
 
-#log-in {
-    background-color:  #b81c36;
-    color: white;
-}
-
 #sign-up:hover {
-    opacity: 0.9;
-}
-
-#log-in:hover {
     opacity: 0.9;
 }
 
 .signup-and-login-button a {
     text-decoration: none;
+    color: white;
+}
+
+#login-button {
+    background-color: #b81c36;
+}
+
+#sign-up {
     color: #b81c36;
+}
+
+#log-in:hover {
+    opacity: 0.9;
+    color: white;
 }
 
 /*navigation bar setting, han*/
