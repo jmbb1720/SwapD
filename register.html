@@ -3,7 +3,7 @@
 
 <head>
     <title>SwapD</title>
-    <link rel="stylesheet" type="text/css" href="newstyle.css">
+    <link rel="stylesheet" type="text/css" href="register-login-style.css">
 </head>
 
 <body>
@@ -91,8 +91,7 @@
             <li id="home"><a href="">Other</a></li>
             <li id="home"><a href="">Get Started</a></li>
             <li id="submit-post">
-                <button class="submit-post-button"><a
-                        href="submit-post.html">Submit Post</a></button>
+                <button class="submit-post-button"><a href="submit-post.html">Submit Post</a></button>
             </li>
         </ul>
         <div class="burger">
@@ -105,20 +104,51 @@
 
     <div class="zone section-under-nav grid-wrapper">
         <div class="box tile">
-            <img class="post-image" src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg">
-            <h1>Tennis</h1>
-            <div class="icon-text-posted-by-someone">
-                <img class="icon-posted-by-someone" src="https://image.flaticon.com/icons/svg/1717/1717787.svg">
-                <p class="text-posted-by-someone">Posted on 21st November 2019 by Hoang</p>
-            </div>
-            <p id="post">Awesome lesson Contact: 66775508</p>
-            <!-- <p id="continue-reading"><a href="tennis.html">Continue Reading</a></p> -->
-            <a><img class="icon-continue-reading" src="https://image.flaticon.com/icons/svg/216/216680.svg"></a>
-            <!-- <button class="button-post1">Continue Reading</button> -->
+            <form action="/action_page.php" method="get" target="_blank">
+                <div class="register-container">
+                    <a href="newindex.html" id="logo">
+                        <img src="" width="90" height="50" alt="SwapD-logo"></a>
+                    <h1>Register</h1>
+                    <hr>
+                    <div class='first-last-name-container'>
+                        <!-- <label class="title" for="fname">First name:</label> -->
+                        <input type="text" id="fname" name="fname" placeholder="Your First Name">
+                        <!-- first name -->
+                        <!-- <label class="title" for="lname">Last name:</label> -->
+                        <input type="text" id="lname" name="lname" placeholder="Your Last Name">
+                        <!-- last name -->
+                    </div><br><br>
+                    <!-- <label class="title" for="email">Your Dickinson Email</label> -->
+                    <input type="text" id="email" name="email" placeholder="Your Dickinson Email"><br><br>
+                    <!-- email -->
+                    <!-- <label class="title" for="password">Pass Word</label> -->
+                    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+                    <!-- password -->
+                    <!-- <label class="title" for="password">Pass Word</label> -->
+                    <input type="password" id="confirm-password" name="cfpassword"
+                        placeholder="Confirm Password"><br><br>
+                    <!-- confirm password -->
+                    <div class="learner-instructor">
+                        <p id="note">* Please answer this question: Are you signing up to be a learner or an instructor?
+                        </p>
+                        <select id="learner-instructor" name="learner-instructor">
+                            <option value="learner">Learner</option>
+                            <option value="instructor">Instructor</option>
+                            <option value="both">Both</option>
+                        </select><br><br>
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label><!-- remember me -->
+                    <p>By registering an account, you agree to our <a href="" style="color:#b81c36">Terms & Privacy</a>.
+                    </p>
+                    <input class="submit-post-button" id="submit-register" type="submit" value="Submit"><br></br>
+                    <!-- submit -->
+                </div> <!-- register container -->
+            </form>
         </div>
     </div> <!-- tile -->
 
-    <!-- <div class="zone red">Side Bar</div> -->
     <footer class="zone yellow">SwapD</footer>
 </body>
 
