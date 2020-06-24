@@ -4,6 +4,9 @@
 <head>
     <title>SwapD</title>
     <link rel="stylesheet" type="text/css" href="post-style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+
 </head>
 
 <body>
@@ -96,11 +99,13 @@
     </nav>
 
     <div class="big-post">
-        <img src="https://blog.traveloka.com/en/wp-content/uploads/sites/3/2019/05/iStock-683274236.jpg">
-        <h1>Arts</h1>
-        <p>Posted on 21st November 2019 by Someone</p>
-        <p id="post">Art has long been recognized as an important part of a well-rounded education -- but when it comes down to setting budget priorities, the arts rarely rise to the top. Many public schools saw their visual, performing and musical arts programs cut completely during the last recession, despite the many studies showing that exposure to the arts can help with academics too. A few schools are taking the research to heart, weaving the arts into everything they do and finding that the approach not only boosts academic achievement but also promotes creativity, self-confidence and school pride.
-        </p>
+        <div id="post-test1" class="post">
+            <img src="https://blog.traveloka.com/en/wp-content/uploads/sites/3/2019/05/iStock-683274236.jpg">
+            <h1 class="post-title">Arts</h1>
+            <p>Posted on 21st November 2019 by Someone</p>
+            <p class="post-content">Art has long been recognized as an important part of a well-rounded education -- but when it comes down to setting budget priorities, the arts rarely rise to the top. Many public schools saw their visual, performing and musical arts programs cut completely during the last recession, despite the many studies showing that exposure to the arts can help with academics too. A few schools are taking the research to heart, weaving the arts into everything they do and finding that the approach not only boosts academic achievement but also promotes creativity, self-confidence and school pride.
+            </p>
+        </div>
 
         <div class="delete">
             <button class="button-post1" onclick="document.getElementById('delete-confirmation').style.display='block'"> Delete Post</button>
@@ -115,6 +120,31 @@
                 </div>
             </form>
         </div>
+
+        <a href="update-post.html">
+            <button class="button-post1"> Update Post</button>
+        </a>
+
+        <div class="update">
+            <button class="button-post1" onclick="openPopup()"> Update Post Test</button>
+        </div>
+
+        <div id="update-confirmation" class="modal">
+            <form class="modal-content" action="">
+                <span class="close" type="button" onclick="document.getElementById('update-confirmation').style.display='none'"> X </span>
+                <label class="title" for="post">Post title:</label>
+                    <textarea onclick="getPostTitle()" id="post-title-update" rows="1" cols="100" name="post-title" form="usrform">
+                        Click to see your current post title
+                    </textarea><br><br>
+                <label class="title" for="desc">Description:</label><br><br>
+                    <textarea onclick="getPost()" id="post-content-update" rows="6" cols="100" name="comment" form="usrform">
+                        Click to see your current post contents
+                    </textarea><br><br>
+                <!-- description -->
+                    <input type="submit" value="Submit" class="button-post1"><br></br>
+            </form>
+        </div>
+
 
         <div class="comment-box">
             <form action="" id="comment">
@@ -142,6 +172,31 @@
                     Comment comment comment
                     <br>
                     Comment comment comment
+                    <div class="individual-reply">
+                        <div class="comment-name">
+                            <span> This area is for name </span>
+                        </div>
+                        <div class="comment-main comment-secondary">
+                            Comment comment comment reply reply Reply
+                            <br>
+                            reply reply
+                            <br>
+                            comment
+                        </div>
+                    </div>
+
+                    <div class="individual-reply">
+                        <div class="comment-name">
+                            <span> This area is for name </span>
+                        </div>
+                        <div class="comment-main comment-secondary">
+                            Comment comment comment reply reply Reply
+                            <br>
+                            reply reply
+                            <br>
+                            comment
+                        </div>
+                    </div>
                 </div>
                 <div class="comment-reply">
                     Reply <!--To be discussed: link/button to show a box/something like facebook reply comment-->
@@ -155,6 +210,18 @@
                     Comment comment comment
                     <br>
                     Comment comment comment
+                </div>
+                <div class="individual-reply">
+                    <div class="comment-name">
+                        <span> This area is for name </span>
+                    </div>
+                    <div class="comment-main comment-secondary">
+                        Comment comment comment reply reply Reply
+                        <br>
+                        reply reply
+                        <br>
+                        comment
+                    </div>
                 </div>
                 <div class="comment-reply">
                     Reply <!--To be discussed: link/button to show a box/something like facebook reply comment-->

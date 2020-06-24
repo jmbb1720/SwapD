@@ -18,3 +18,23 @@ const navSlide = () => {
 }
 
 navSlide();
+
+//Update Post
+function getPostTitle() {
+    var x = document.getElementById("post-test1").getElementsByClassName("post-title")[0].innerHTML;
+    document.getElementById("post-title-update").innerHTML = x;
+}
+
+function getPost() {
+    var x = document.getElementById("post-test1").getElementsByClassName("post-content")[0].innerHTML;
+    document.getElementById("post-content-update").innerHTML = x;
+}
+
+function openPopup() {
+    var x = document.getElementById("update-confirmation");
+    x.style.display = 'block';
+    getPostTitle();
+    getPost();
+}
+
+//document.getElementById('update-confirmation').style.display='block'
