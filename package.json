@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anthonyhvo12/SwapD.git"
+    "url": "git+https://github.com/jmbb1720/SwapD.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anthonyhvo12/SwapD/issues"
+    "url": "https://github.com/jmbb1720/SwapD/issues"
   },
-  "homepage": "https://github.com/anthonyhvo12/SwapD#readme",
+  "homepage": "https://github.com/jmbb1720/SwapD#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
