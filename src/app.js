@@ -17,8 +17,12 @@ app.use(express.static(publicDir))
 app.use(postRouter)
 app.use(userRouter)
 
-app.get('', (req, res) => {
-    res.sendFile(viewsPath + '/submit-post copy.html')
+app.get('/', (req, res) => {
+    res.sendFile(viewsPath + '/newindex.html')
+})
+
+app.get('/submit', (req, res) => {
+    res.sendFile(viewsPath + '/submit-post.html')
 })
 
 app.get('/register', (req, res) => {
@@ -27,6 +31,18 @@ app.get('/register', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.sendFile(viewsPath + '/login.html')
+})
+
+app.get('/arts-studio', (req, res) => {
+    res.sendFile(viewsPath + '/arts-studio.html')
+})
+
+app.get('/sports-tennis', (req, res) => {
+    res.sendFile(viewsPath + '/sports-tennis.html')
+})
+
+app.get('/tech-program', (req, res) => {
+    res.sendFile(viewsPath + '/tech-program.html')
 })
 
 app.listen(port, () => {

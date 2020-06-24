@@ -2,7 +2,7 @@
   "name": "swapd",
   "version": "1.0.0",
   "description": "SwapD# Contributors: Elly Do, Han Trinh, Anthony Vo",
-  "main": "javascript.js",
+  "main": "/src/app.js",
   "scripts": {
     "start": "node src/app.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
