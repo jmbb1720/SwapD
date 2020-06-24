@@ -15,7 +15,6 @@ router.post('/users', async (req,res) => {
 
 router.get('/users', async (req, res) => {
     try {
-        // console.log(req.body)
         const user = await User.findOne(req.body)
         if (!user) {
             return res.status(404).send('Post not found!')
@@ -27,7 +26,7 @@ router.get('/users', async (req, res) => {
     }
 })
 
-router.get('/users/login', async (req, res) => {
+router.post('/users/login', async (req, res) => {
     try {
         const user = await User.findByCredentials(req.body.dsonEmail, req.body.password)
         res.status(200).send(user)

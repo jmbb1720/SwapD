@@ -34,24 +34,30 @@ const userSchema = new mongoose.Schema({
             if (value.toLowerCase().includes('password'))
                 throw new Error('Password can\'t contain "password"!')
         }
+    },
+    isLearner : {
+        type: Boolean,
+        required: true
+    },
+    isInstructor : {
+        type: Boolean,
+        required: true
     }
 })
 
 //change res.send to return//throw error
 userSchema.statics.findByCredentials = async (dsonEmail, password) => {
     try {
-        // console.log(dsonEmail)
         const user = await User.findOne({dsonEmail})
-        // console.log(user)
         if (!user) {
             throw new Error('Unable to login!')
         }
         else {
-            const hashedPass = await bcrypt.hash(password, 8)
-            if (hashedPass != user.password) {
-                // console.lo
+            const match = await bcrypt.compare(password, user.password)
+            if (!match) {
                 throw new Error('Unable to login!')
             }
+            
             return user
         }
     }
@@ -66,8 +72,6 @@ userSchema.pre('save', async function (next) {
     if (user.isModified('password')) {
         user.password = await bcrypt.hash(user.password, 8)
     }
-    
-    console.log(user.password)
     next()
 
 })

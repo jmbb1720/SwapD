@@ -18,7 +18,15 @@ app.use(postRouter)
 app.use(userRouter)
 
 app.get('', (req, res) => {
-    res.sendFile(viewsPath + '/submit-post.html')
+    res.sendFile(viewsPath + '/submit-post copy.html')
+})
+
+app.get('/register', (req, res) => {
+    res.sendFile(viewsPath + '/register.html')
+})
+
+app.get('/login', (req, res) => {
+    res.sendFile(viewsPath + '/login.html')
 })
 
 app.listen(port, () => {

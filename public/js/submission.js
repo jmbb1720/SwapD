@@ -17,9 +17,6 @@ form.addEventListener('submit', (e) => {
         tags: document.getElementById('tags').value,
     }
 
-    // console.log(post)
-    // console.log('Form submitted!')
-    // console.log(JSON.stringify(post))
     fetch('/posts', 
     {
         method: 'post', 
@@ -30,6 +27,7 @@ form.addEventListener('submit', (e) => {
     }).then((response) => {
         console.log(response)
     }).catch((error) => {
+        alert(error.message)
         console.log(error)
     })
 }

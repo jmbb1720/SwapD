@@ -4,8 +4,8 @@
   "description": "SwapD# Contributors: Elly Do, Han Trinh, Anthony Vo",
   "main": "javascript.js",
   "scripts": {
-    "start": "node src/submission.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/submission.js"
+    "start": "node src/app.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
   },
   "repository": {
     "type": "git",
