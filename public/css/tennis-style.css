@@ -136,6 +136,7 @@ nav {
     font-size: 0.55em;
     font-style: italic;
     color: rgb(99, 99, 99);
+    line-height: 1em;
 }
 
 .icon-posted-by-someone {
