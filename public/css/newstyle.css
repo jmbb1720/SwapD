@@ -490,8 +490,10 @@ input[type=text], input[type=password] {
 /* STYLE FOR user-info-update.html */
 .update-button-container {
     display: flex;
-    align-self: flex-end;
+    align-self: center;
     margin-bottom: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
 .update-button {
