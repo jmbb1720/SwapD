@@ -18,7 +18,7 @@ app.use(postRouter)
 app.use(userRouter)
 
 app.get('/', (req, res) => {
-    res.sendFile(viewsPath + '/newindex.html')
+    res.sendFile(viewsPath + '/index.html')
 })
 
 app.get('/submit', (req, res) => {

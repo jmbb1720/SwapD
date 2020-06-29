@@ -43,6 +43,10 @@ const Post = mongoose.model('Post', {
     tags: {
         type: String,
     },
+    time: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 module.exports = Post

@@ -22,11 +22,11 @@ use findOne
 router.get('/posts', async (req, res) => {
     try {
         // console.log(req.body)
-        const post = await Post.findOne(req.body)
-        if (!post) {
+        const posts = await Post.find(req.body)
+        if (!posts) {
             return res.status(404).send('Post not found!')
         }
-        res.status(200).send(post)
+        res.status(200).send(posts)
     }
     catch (e) {
         res.status(400).send(e)
