@@ -6,10 +6,35 @@
     <link rel="stylesheet" type="text/css" href="post-style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
-
+    <link rel="import" href="sports-tennis.html">
 </head>
 
 <body>
+    
+  
+<!--<template id="template">
+    <script>
+      const button = document.getElementById('click-me');
+      button.addEventListener('click', event => alert(event));
+    </script>
+    <style>
+      #click-me {
+        all: unset;
+        background: tomato;
+        border: 0;
+        border-radius: 4px;
+        color: white;
+        font-family: Helvetica;
+        font-size: 1.5rem;
+        padding: .5rem 1rem;
+      }
+    </style>
+    <button id="click-me">Log click event</button>
+  </template>-->
+  <div id="test">
+  </div>
+
+
     <div class="top-bar sticky">
         <div class="fixed-width">
             <div id="logo">
@@ -18,7 +43,7 @@
             <div id="slogan">Connecting the community one skill at a time</div>
         </div>
     </div> <!-- top-bar -->
-
+    <template id="template">
     <nav class="zone nav-bar">
         <ul class="main-nav">
             <li id="home"><a href="newindex.html">Home</a></li>
@@ -97,6 +122,15 @@
             <div class="line3"></div>
         </div>
     </nav>
+    </template>
+
+    <script>
+        var temp1 = document.getElementById("template").content;
+        var copy = document.importNode(temp1, true);
+        //document.getElementById("test").appendChild(copy);
+        var content = document.querySelector('link[rel="import"]').import;
+        document.getElementById("test").appendChild(content);
+    </script>
 
     <div class="big-post">
         <div id="post-test1" class="post">
@@ -246,10 +280,8 @@
         </div>
             
         <a href="art-page.html"><button class="button-post1">More in Art</button> </button></a>
-        </div>
     </div>
 
     <footer class="foot">SwapD</footer>
 </body>
-
 </html>
