@@ -290,13 +290,12 @@ footer {
 }
 
 .comment-reply {
-    border-radius: 50px;
-    background-color: pink;
+    /*border-radius: 50px;
     color: white;
     width: 50px;
     text-align: center;
     padding-top: 5px;
-    margin: 5px;
+    margin: 5px;*/
 }
 
 .individual-reply {
@@ -306,6 +305,20 @@ footer {
     margin-top: 10px;
     border-radius: 5px;
     padding: 20px;
+}
+
+.reply-box {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.comment-reply .button-post1 {
+    width: 15%;
+    margin: 0;
+    border-radius: 10px;
 }
 
 /*Delete Post Button*/
