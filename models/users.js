@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const userSchema = new mongoose.Schema({
     firstName: {
@@ -42,7 +43,13 @@ const userSchema = new mongoose.Schema({
     isInstructor : {
         type: Boolean,
         required: true
-    }
+    },
+    tokens: [{
+        token: {
+            type: String,
+            required: true,
+        }
+    }]
 })
 
 //change res.send to return//throw error
@@ -64,6 +71,15 @@ userSchema.statics.findByCredentials = async (dsonEmail, password) => {
     catch (e) {
         throw e
     }
+}
+
+userSchema.methods.generateAuthToken = async function () {
+    const user = this //need to bind this user context
+    const token = jwt.sign({_id: user._id.toString()}, 'thisIsMyNewInstance')
+    
+    user.tokens = user.tokens.concat({token})
+    await user.save()
+    return token
 }
 
 userSchema.pre('save', async function (next) {
