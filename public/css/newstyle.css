@@ -5,6 +5,10 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+h1 {
+    line-height: 1em;
+}
+
 footer {
     text-align: center;
     background-color: #202020;
@@ -15,7 +19,7 @@ footer {
 /* || UTILITIES */
 /* center in the middle */
 .fixed-width {
-    width: 1000px;
+    width: 1250px;
     /* margin: 0 auto; */
 }
 
@@ -46,7 +50,7 @@ footer {
 
 .section-under-nav {
     background: rgb(230, 230, 230);
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 /* NAV bar */
@@ -162,7 +166,7 @@ nav {
 }
 
 .submit-post-button:hover {
-    background-color: #b81c36;
+    opacity: 0.9;
     color: black;
 }
 
@@ -211,6 +215,44 @@ nav {
 }
 
 /* || STORE PAGES */
+.logo-slogan-and-signup-container {
+    display: flex;
+}
+
+.signup-and-login-container {
+    display: flex;
+}
+
+.signup-and-login-button {
+  padding: 0px 20px;
+  margin: 15px 0 45px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.signup-and-login-button a {
+    text-decoration: none;
+    color: white;
+}
+
+#login-button {
+    background-color: #b81c36;
+}
+
+#sign-up {
+    color: #b81c36;
+}
+
+#sign-up:hover {
+    opacity: 0.9;
+}
+
+#log-in:hover {
+    opacity: 0.9;
+    color: white;
+}
+
 /*navigation bar setting, han*/
 #home{
     float: left;
@@ -246,6 +288,58 @@ nav {
     color: #202020;
 }
 
+/* STYLE FOR tennis.html */
+
+.tile-align {
+    display: flex;
+    padding: 20px;
+}
+
+.big-box {
+   background-color: white; 
+   padding: 20px 20px 20px 20px;
+   margin: 0px 30px 0px 0px;
+   transition: 1s;
+}
+
+#big-box-top {
+    margin-bottom:30px;
+}
+
+ #big-box-bottom {
+    display: flex;
+    flex-direction: column;
+ }
+
+.side-box {
+    background-color: white; 
+    padding: 20px 20px 20px 20px;
+    transition: 1s;
+ }
+
+ #side-box-top {
+    margin: 0px 0px 30px 0px;
+ }
+
+ .button-comment {
+    height: 40px;
+    width: 140px;
+    background-color: #c8102e; /* Dickinson's Red */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 15px 0px 0px 0px;
+    cursor: pointer;    
+  }
+
+.button-comment:hover {
+    background-color: #b81c36;
+    color: black;
+}
+
+/* STYLE FOR submit-post.html */
 .dropdown-category {
     display: flex;
 }
@@ -253,6 +347,53 @@ nav {
 #note {
     font-style: italic;
     font-size: 0.8em;
+}
+
+/* STYLE FOR register.html and login.html */
+
+.grid-wrapper-register-login {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px 80px 0px 80px;
+    line-height: 0.5em;
+    justify-items: center;
+}
+
+#forgot-your-pw {
+    font-size: 0.8em;
+}
+
+.first-last-name-container {
+   display: flex;
+   width: 100%;
+}
+
+#fname {
+   margin-right: 10px;
+}
+
+input {
+   padding: 6px 1px;
+   margin: 4px 0px;
+}
+
+input[type=text], input[type=password] {
+   width: 100%;
+}
+
+#submit-register {
+   width: 50%;
+}
+
+.register-container {
+   padding: 5px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#learner-instructor {
+   padding: 5px;
 }
 
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

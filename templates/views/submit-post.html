@@ -3,31 +3,38 @@
 
 <head>
     <title>SwapD</title>
-    <link rel="stylesheet" type="text/css" href="submit-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/newstyle.css">
+    <script src="/js/submission.js" defer></script>
 </head>
 
 <body>
     <div class="top-bar sticky">
-        <div class="fixed-width">
-            <a href="newindex.html" id="logo">
-                <img src="" width="90" height="50" alt="SwapD-logo">
-                <!-- <div id="name">SwapD</div> -->
-            </a>
-            <div id="slogan">Connecting the community one skill at a time</div>
+        <div class="logo-slogan-and-signup-container">
+            <div class="fixed-width">
+                <a href="/" id="logo">
+                    <img src="" width="90" height="50" alt="SwapD-logo">
+                    <!-- <div id="name">SwapD</div> -->
+                </a>
+                <div id="slogan">Connecting the community one skill at a time</div>
+            </div>
+            <div class='signup-and-login-container'>
+                <button class='signup-and-login-button'><a id='sign-up' href="/register">Register</a></button>
+                <button class='signup-and-login-button' id="login-button"><a id='log-in' href="/login">Log In</a></button>
+            </div>
         </div>
     </div> <!-- top-bar -->
 
     <nav class="zone nav-bar">
         <ul class="main-nav">
-            <li id="home"><a href="newindex.html">Home</a></li>
+            <li id="home"><a href="/">Home</a></li>
             <li id="home">
                 <div class="dropdown">
                     <!--Dropdown menu-->
                     <button class="drop-button">Arts</button>
                     <div class="dropdown-content">
-                        <a href="arts-studio.html">Studio Art</a>
-                        <a href="arts-studio.html">Art History</a>
-                        <a href="arts-studio.html">Art Business</a>
+                        <a href="/arts-studio">Studio Art</a>
+                        <a href="/arts-studio">Art History</a>
+                        <a href="/arts-studio">Art Business</a>
                     </div>
                 </div>
             </li>
@@ -45,10 +52,10 @@
                 <div class="dropdown">
                     <button class="drop-button">Sports</button>
                     <div class="dropdown-content">
-                        <a href="sports-tennis.html">Tennis</a>
-                        <a href="sports-tennis.html">Basketball</a>
-                        <a href="sports-tennis.html">Badminton</a>
-                        <a href="sports-tennis.html">Baseball</a>
+                        <a href="/sports-tennis">Tennis</a>
+                        <a href="/sports-tennis">Basketball</a>
+                        <a href="/sports-tennis">Badminton</a>
+                        <a href="/sports-tennis">Baseball</a>
                     </div>
                 </div>
             </li>
@@ -56,10 +63,10 @@
                 <div class="dropdown">
                     <button class="drop-button">Technology</button>
                     <div class="dropdown-content">
-                        <a href="tech-program.html">Programming</a>
-                        <a href="tech-program.html">A</a>
-                        <a href="tech-program.html">B</a>
-                        <a href="tech-program.html">C</a>
+                        <a href="/tech-program">Programming</a>
+                        <a href="/tech-program">A</a>
+                        <a href="/tech-program">B</a>
+                        <a href="/tech-program">C</a>
                     </div>
                 </div>
             </li>
@@ -86,7 +93,7 @@
             <li id="home"><a href="">Get Started</a></li>
             <li id="submit-post">
                 <button class="submit-post-button"><a
-                        href="submit-post.html">Submit Post</a></button>
+                        href="/submit">Submit Post</a></button>
             </li>
         </ul>
         <div class="burger">
@@ -95,10 +102,10 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <script scr="javascript.js"></script>
+    <script scr="/js/javascript.js"></script>
 
     <div class="zone section-under-nav grid-wrapper">
-        <form action="/action_page.php" method="get" target="_blank">
+        <form id="form" target="_blank">
             <label class="title" for="fname">First name:</label>
             <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br> <!-- first name -->
             <label class="title" for="lname">Last name:</label>
@@ -108,9 +115,9 @@
             <!-- email -->
             <p id="note">(This will not be made public. It is only used for verification purposes)</p>
             <label class="title" for="post">Post title:</label>
-            <input type="text" id="post" name="post" placeholder="Enter your post title"><br><br> <!-- post title -->
+            <input type="text" id="postTit" name="post" placeholder="Enter your post title"><br><br> <!-- post title -->
             <label class="title" for="desc">Description:</label><br><br>
-            <textarea rows="6" cols="100" name="comment" form="usrform">Describe your post...</textarea><br><br>
+            <textarea rows="6" cols="100" name="comment" id="desc" form="usrform">Describe your post...</textarea><br><br>
             <!-- description -->
             <label class="title" for="image">Image Upload:</label>
             <input type="file" name="fileToUpload" id="fileToUpload">
@@ -120,20 +127,20 @@
                 <button class="dropbtn">Choose a category
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <a href="#">Arts</a>
-                    <a href="#">Academic</a>
-                    <a href="#">Sports</a>
-                    <a href="#">Technology</a>
-                    <a href="#">Fashion</a>
-                    <a href="#">Culinary</a>
-                    <a href="#">Others</a>
+                <select name="categories" id="categories">
+                    <option value="arts">Arts</option>
+                    <option value="academics">Academics</option>
+                    <option value="sports">Sports</option>
+                    <option value="tech">Technology</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="culinary">Culinary</option>
+                    <option value="others">Others</option>
                 </div> <!-- category -->
             </div><br></br>
             <label class="title" for="tags">Tags:</label>
             <input type="text" id="tags" name="tags" placeholder="Enter your tags"><br></br> <!-- tags -->
             <label class="title" for="verif">Verification:</label>
-            <p id="note">Please answer this question: When was Dickinson College founded?</p>
+            <p id="verif">Please answer this question: When was Dickinson College founded?</p>
             <input type="answer" id="answer" name="answer" placeholder="Enter your answer"><br></br> <!-- verification -->
             <input type="submit" value="Submit"><br></br> <!-- submit -->
         </form>
