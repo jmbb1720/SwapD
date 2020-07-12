@@ -45,6 +45,10 @@ app.get('/tech-program', (req, res) => {
     res.sendFile(viewsPath + '/tech-program.html')
 })
 
+app.get('/tennis', (req, res) => {
+    res.sendFile(viewsPath + '/tennis.html')
+})
+
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
