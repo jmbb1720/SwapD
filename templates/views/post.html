@@ -3,10 +3,10 @@
 
 <head>
     <title>SwapD</title>
-    <link rel="stylesheet" type="text/css" href="post-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/post-style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript.js"></script>
-    <link rel="import" href="sports-tennis.html">
+    <script type="text/javascript" src="/js/javascript.js"></script>
+    <link rel="import" href="/sports-tennis">
 </head>
 
 <body>
@@ -31,9 +31,6 @@
     </style>
     <button id="click-me">Log click event</button>
   </template>-->
-  <div id="test">
-  </div>
-
 
     <div class="top-bar sticky">
         <div class="fixed-width">
@@ -43,18 +40,18 @@
             <div id="slogan">Connecting the community one skill at a time</div>
         </div>
     </div> <!-- top-bar -->
-    <template id="template">
+
     <nav class="zone nav-bar">
         <ul class="main-nav">
-            <li id="home"><a href="newindex.html">Home</a></li>
+            <li id="home"><a href="/">Home</a></li>
             <li id="home">
                 <div class="dropdown">
                     <!--Dropdown menu-->
                     <button class="drop-button">Arts</button>
                     <div class="dropdown-content">
-                        <a href="arts-studio.html">Studio Art</a>
-                        <a href="arts-studio.html">Art History</a>
-                        <a href="arts-studio.html">Art Business</a>
+                        <a href="/arts-studio">Studio Art</a>
+                        <a href="/arts-studio">Art History</a>
+                        <a href="/arts-studio">Art Business</a>
                     </div>
                 </div>
             </li>
@@ -72,10 +69,10 @@
                 <div class="dropdown">
                     <button class="drop-button">Sports</button>
                     <div class="dropdown-content">
-                        <a href="sports-tennis.html">Tennis</a>
-                        <a href="sports-tennis.html">Basketball</a>
-                        <a href="sports-tennis.html">Badminton</a>
-                        <a href="sports-tennis.html">Baseball</a>
+                        <a href="/sports-tennis">Tennis</a>
+                        <a href="/sports-tennis">Basketball</a>
+                        <a href="/sports-tennis">Badminton</a>
+                        <a href="/sports-tennis">Baseball</a>
                     </div>
                 </div>
             </li>
@@ -83,10 +80,10 @@
                 <div class="dropdown">
                     <button class="drop-button">Technology</button>
                     <div class="dropdown-content">
-                        <a href="tech-program.html">Programming</a>
-                        <a href="tech-program.html">A</a>
-                        <a href="tech-program.html">B</a>
-                        <a href="tech-program.html">C</a>
+                        <a href="/tech-program">Programming</a>
+                        <a href="/tech-program">A</a>
+                        <a href="/tech-program">B</a>
+                        <a href="/tech-program">C</a>
                     </div>
                 </div>
             </li>
@@ -122,7 +119,6 @@
             <div class="line3"></div>
         </div>
     </nav>
-    </template>
 
     <script>
         var temp1 = document.getElementById("template").content;
@@ -155,9 +151,9 @@
             </form>
         </div>
 
-        <a href="update-post.html">
+        <!--<a href="update-post.html">
             <button class="button-post1"> Update Post</button>
-        </a>
+        </a>-->
 
         <div class="update">
             <button class="button-post1" onclick="openPopup()"> Update Post Test</button>
@@ -167,13 +163,13 @@
             <form class="modal-content" action="">
                 <span class="close" type="button" onclick="document.getElementById('update-confirmation').style.display='none'"> X </span>
                 <label class="title" for="post">Post title:</label>
-                    <textarea onclick="getPostTitle()" id="post-title-update" rows="1" cols="100" name="post-title" form="usrform">
+                    <input onclick="getPostTitle()" id="post-title-update" rows="1" cols="100" name="post-title" form="usrform">
                         Click to see your current post title
-                    </textarea><br><br>
+                    </input><br><br>
                 <label class="title" for="desc">Description:</label><br><br>
-                    <textarea onclick="getPost()" id="post-content-update" rows="6" cols="100" name="comment" form="usrform">
+                    <input onclick="getPost()" id="post-content-update" rows="6" cols="100" name="comment" form="usrform">
                         Click to see your current post contents
-                    </textarea><br><br>
+                    </input><br><br>
                 <!-- description -->
                     <input type="submit" value="Submit" class="button-post1"><br></br>
             </form>
