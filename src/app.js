@@ -49,6 +49,10 @@ app.get('/tennis', (req, res) => {
     res.sendFile(viewsPath + '/tennis.html')
 })
 
+app.get('/post', (req, res) => {
+    res.sendFile(viewsPath + '/post.html')
+})
+
 app.get('/user-info', (req, res) => {
     res.sendFile(viewsPath + '/user-info.html')
 })
