@@ -53,6 +53,14 @@ app.get('/post', (req, res) => {
     res.sendFile(viewsPath + '/post.html')
 })
 
+app.get('/user-info', (req, res) => {
+    res.sendFile(viewsPath + '/user-info.html')
+})
+
+app.get('/user-info-update', (req, res) => {
+    res.sendFile(viewsPath + '/user-info-update.html')
+})
+
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
