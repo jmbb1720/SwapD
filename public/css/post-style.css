@@ -1,0 +1,386 @@
+body {
+    margin: auto 0;
+    box-sizing: border-box ;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* center in the middle */
+.fixed-width {
+    width: 1000px;
+    /* margin: 0 auto; */
+}
+.top-bar {
+    background-color: white;
+    width: 100%;
+    height: 120px;
+    color: black;
+    /* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+}
+
+/* NAV bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    color: pink;
+}
+
+.nav-bar {
+    background-color: black;
+}
+
+.main-nav {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.main-nav li {
+    list-style: none;
+}
+
+#home{
+    float: left;
+    font-size: 0.85em;
+    position: relative;
+    /* left: 19px; */
+    /* border: 1px solid white; */
+    display: block;
+    padding: 19px;
+    
+}
+
+#home:hover{
+    background-color:  #c8102e;
+}
+
+/*.main-nav li:hover{
+    background-color:  #c8102e; 
+    /* Dickinson's Red */
+    /* color: #000000;
+    cursor: pointer;
+    padding: 14px; 
+} */
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/*.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}*/
+/*for dropdown menu*/
+/* Dropdown Button */
+.drop-button{
+    background-color: transparent;
+    color:white;
+    padding: 0;
+    font-size: 1em;
+    border: none;
+  }  
+  
+.dropdown {
+    /*position: relative;*/
+    overflow: hidden;
+    display: block;
+    border: none;
+  }
+  
+  /* Dropdown Content*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c8102e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+.dropdown-content a {
+    color: pink;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {background-color: orange; color:purple}
+  
+.dropdown:hover .dropdown-content {display: block;}
+
+.submit-post-button {
+    background-color: #c8102e;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#logo {
+    float: left;
+    padding-top: 35px;
+    padding-left: 118px;
+    padding-bottom: 6px;
+}
+
+#slogan {
+    padding-top: 75px;
+    padding-left: 118px;
+    padding-bottom: 6px;
+}
+
+/* for tiles */
+.zone {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.black {
+    background: #202020;;
+}
+
+.gray {
+    background: rgb(230, 230, 230);
+}
+
+/* for posts */
+#post {
+    line-height: 1.3em;
+    font-size: 1.0em;
+    color: #202020;
+}
+
+.tile h1 {
+    font-size: 1.7em;
+}
+
+.tile p {
+    font-size: 0.9em;
+    line-height: 1em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* for post button */
+
+.button-post1 {
+    height: 48px;
+    width: 190px;
+    background-color: #c8102e; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.0em;
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;    
+  }
+
+.button-post1:hover {
+    background-color: black;
+    color: white;
+}
+
+.big-post{
+    padding: 100px 100px 100px 100px
+}
+
+.big-post img{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GRID */
+.grid-wrapper {
+    display: grid;
+    /* grid-gap: 20px;  */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.box > img{
+    width: 100%;
+}
+
+.box {
+   background-color: white; 
+   padding: 20px 20px 50px 20px;
+   margin: 20px;
+   transition: 1s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
+    -o-box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
+    box-shadow: rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -10px 15px;
+ }
+
+footer {
+    text-align: center;
+    background-color: #202020;
+    color: white;
+    padding: 10px;
+}
+
+/*Comment box*/
+.comment-box {
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.comment-box #comment-space{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comment-box .button-post1 {
+    margin-left: 40%;
+}
+
+.name-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.show-comment {
+    border: none;
+}
+
+.individual-comment {
+    background-color: lightcoral;
+    /*opacity: 50%;*/
+    margin: 5px 0;
+    /*border: 2px solid black;*/
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comment-name {
+    font-size: 17px;
+    font-weight: bold;
+    transition: 150ms;
+}
+
+.comment-name:hover {
+    color: #c8102e; /*hover when accessing user's account*/
+    cursor: pointer;
+}
+
+.comment-main, .comment-reply {
+    padding: 0 10px 10px 10px;
+    font-size: 15px;
+}
+
+.individual-reply {
+    margin-left: 50px;
+    background-color: lightpink;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.reply-box {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.comment-reply .button-post1 {
+    width: 15%;
+    margin: 0;
+    border-radius: 10px;
+}
+
+/*Delete Post Button*/
+.modal {
+    display: none;
+    position: absolute;
+    padding: 10px 20px;
+    width: 100%;
+}    
+
+.modal-content {
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    width: 40%;
+    margin: auto;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.modal-content h3 {
+    text-align: center;   
+}
+
+.confirmation-button .button-post1 {
+    width:48%;
+    margin: 0 0.5%;
+}
+
+#update-confirmation {
+    width: 70%;
+    margin: auto;
+}
+
+#update-confirmation .modal-content{
+    width: 100%;
+}
+
+#update-confirmation textarea {
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    color: red;
+}
+
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 1024px) {
+    .main-nav {
+        width: 90%;
+    }
+}  
+
+@media only screen and (max-width: 800px) {
+      body {
+          overflow-x: hidden;
+      }
+
+      .main-nav {
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 16vh;
+        width: 100%;
+        background-color: #202020;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transfrom 0.5s ease-in;
+    }
+  }
