@@ -35,10 +35,8 @@ form.addEventListener('submit', (e) => {
     }).then((res) => {
         return res.json()
     }).then((response) => {
-        // console.log(response)
         const keys = Object.keys(response)
-        // console.log(keys)
-        if (!keys.includes("user")) { //was include id
+        if (!keys.includes("_id")) {
             if (keys.includes("message")) { // validator error
                 alert(response.message)
             }
