@@ -38,7 +38,22 @@ router.post('/users/login', async (req, res) => {
         res.send({user, token})
     }
     catch (e) {
-        res.status(400).send(e) //error not being logged to console
+        res.status(400).send(e) //error not being logged to console?
+    }
+})
+
+//Logout of this session only
+router.post('/users/logout', auth, async (req, res) => { //user is sent as part of the request
+    try {
+        req.user.tokens = req.user.tokens.filter((token) => { //save only tokens not equal to this one
+            return token.token !== token.token
+        })
+        await req.user.save()
+        res.send()
+    }
+    catch (e) {
+        console.log(e)
+        res.status(500).send(e)
     }
 })
 
