@@ -250,4 +250,281 @@ nav {
   }
 }
 
+#home {
+  float: left;
+  font-size: 0.85em;
+  position: relative;
+  display: block;
+  padding: 20px;
 
+  &:hover {
+    background-color: @dson-red;
+  }
+}
+
+#logo {
+  float: left;
+  padding-top: 35px;
+  padding-left: 118px;
+  padding-bottom: 6px;
+}
+
+#slogan {
+  padding-top: 75px;
+  padding-left: 118px;
+  padding-bottom: 6px;
+}
+
+#post {
+  line-height: 1.3em;
+  font-size: 0.8em;
+  color: #202020;
+}
+
+.tile-align {
+  display: flex;
+  padding: 20px;
+}
+
+.big-box {
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  margin: 0px 30px 0px 0px;
+  transition: 1s;
+}
+
+#big-box-top {
+  margin-bottom: 30px;
+}
+
+#big-box-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-box {
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  transition: 1s;
+}
+
+#side-box-top {
+  margin: 0px 0px 30px 0px;
+}
+
+.button-comment {
+  height: 40px;
+  width: 140px;
+  background-color: #c8102e; /* Dickinson's Red */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin: 15px 0px 0px 0px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b81c36;
+    color: black;
+  }
+}
+
+/* STYLE FOR submit-post.html */
+.dropdown-category {
+  display: flex;
+}
+
+#note {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+/* STYLE FOR register.html and login.html */
+
+.grid-wrapper-register-login {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0px 80px 0px 80px;
+  line-height: 0.5em;
+  justify-items: center;
+}
+
+#forgot-your-pw {
+  font-size: 0.8em;
+}
+
+.first-last-name-container {
+  display: flex;
+  width: 100%;
+}
+
+#fname {
+  margin-right: 10px;
+}
+
+input {
+  padding: 6px 1px;
+  margin: 4px 0px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+#submit-register {
+  width: 50%;
+}
+
+.register-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#learner-instructor {
+  padding: 5px;
+}
+
+/* STYLE FOR user-info.html */
+.box-user-info {
+  background-color: white;
+  /* padding: 20px 20px 20px 20px; */
+  margin: 15px;
+  transition: 1s;
+}
+
+.tile-align-user-info {
+  display: flex;
+  padding: 15px;
+}
+
+.left-side-tile-user-info {
+  display: grid;
+}
+
+.big-box-left {
+  background-color: white;
+  padding: 25px;
+  transition: 1s;
+  line-height: 0.8em;
+  display: flex;
+  flex-direction: column;
+  /* for update button sticks to bottom */
+  position: relative;
+}
+
+#avatar {
+  height: 20em;
+  width: 30em;
+}
+
+.general-info {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.description-info {
+  line-height: 1.1em;
+  font-size: 0.9em;
+}
+
+.icon-contact {
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &-container {
+    display: flex;
+  }
+}
+
+/* STYLE FOR user-info-update.html */
+.update-button-container {
+  display: flex;
+  align-self: center;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.update-button {
+  background-color: #c8102e; /* Dickinson's Red */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.icon-privacy-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-privacy {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 1024px) {
+  .main-nav {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-nav {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 16vh;
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transfrom 0.5s ease-in;
+
+    li {
+      opacity: 0;
+    }
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
