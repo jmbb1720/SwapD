@@ -7,31 +7,10 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/javascript.js"></script>
     <link rel="import" href="/sports-tennis">
+    
 </head>
 
-<body>
-    
-  
-<!--<template id="template">
-    <script>
-      const button = document.getElementById('click-me');
-      button.addEventListener('click', event => alert(event));
-    </script>
-    <style>
-      #click-me {
-        all: unset;
-        background: tomato;
-        border: 0;
-        border-radius: 4px;
-        color: white;
-        font-family: Helvetica;
-        font-size: 1.5rem;
-        padding: .5rem 1rem;
-      }
-    </style>
-    <button id="click-me">Log click event</button>
-  </template>-->
-
+<body onload="loadPostsToPage()">
     <div class="top-bar sticky">
         <div class="fixed-width">
             <div id="logo">
@@ -110,30 +89,28 @@
             <li id="home"><a href="">Get Started</a></li>
             <li id="submit-post">
                 <button class="submit-post-button"><a
-                        href="submit-post.html">Submit Post</a></button>
+                        href="/submit">Submit Post</a></button>
             </li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
     </nav>
 
-    <script>
+    <!--<script>
         var temp1 = document.getElementById("template").content;
         var copy = document.importNode(temp1, true);
         //document.getElementById("test").appendChild(copy);
         var content = document.querySelector('link[rel="import"]').import;
         document.getElementById("test").appendChild(content);
-    </script>
+    </script>-->
+    <div id="loadload">
+
+    </div>
 
     <div class="big-post">
         <div id="post-test1" class="post">
-            <img src="https://blog.traveloka.com/en/wp-content/uploads/sites/3/2019/05/iStock-683274236.jpg">
-            <h1 class="post-title">Arts</h1>
-            <p>Posted on 21st November 2019 by Someone</p>
-            <p class="post-content">Art has long been recognized as an important part of a well-rounded education -- but when it comes down to setting budget priorities, the arts rarely rise to the top. Many public schools saw their visual, performing and musical arts programs cut completely during the last recession, despite the many studies showing that exposure to the arts can help with academics too. A few schools are taking the research to heart, weaving the arts into everything they do and finding that the approach not only boosts academic achievement but also promotes creativity, self-confidence and school pride.
+            <img id="image" src="https://blog.traveloka.com/en/wp-content/uploads/sites/3/2019/05/iStock-683274236.jpg">
+            <h1 class="post-title" id="title">Arts</h1>
+            <p>Posted <span id="createdAt"> by <span id="firstName"></span> <span id="lastName"></p>
+            <p class="post-content" id="description">Art has long been recognized as an important part of a well-rounded education -- but when it comes down to setting budget priorities, the arts rarely rise to the top. Many public schools saw their visual, performing and musical arts programs cut completely during the last recession, despite the many studies showing that exposure to the arts can help with academics too. A few schools are taking the research to heart, weaving the arts into everything they do and finding that the approach not only boosts academic achievement but also promotes creativity, self-confidence and school pride.
             </p>
         </div>
 
@@ -279,5 +256,6 @@
     </div>
 
     <footer class="foot">SwapD</footer>
+    <script src="/js/loadPosts.js"></script>
 </body>
 </html>

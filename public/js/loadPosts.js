@@ -26,8 +26,15 @@ const loadPostsToPage = async () => {
     
     //in an async function, we use await to wait for the result of another async function
     //before continuing execution
-    const posts = await retrievePosts()
+    const posts = await retrievePosts();
 
     //Use posts to update HTML below...
-    console.log(posts)
+    //console.log("HALLOOOOOOO its working")
+    document.getElementById("title").innerHTML=posts[1].title;
+    //document.getElementById("createdAt").innerHTML=posts[1].createdAt;
+    document.getElementById("firstName").innerHTML=posts[1].firstName;
+    document.getElementById("lastName").innerHTML=posts[1].lastName;
+    document.getElementById("description").innerHTML=posts[1].description;
+
+    console.log(posts[1])
 }
