@@ -1,11 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-class Car extends React.Component {
+'use strict';
+
+const e = React.createElement;
+
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
   render() {
-    return <h2>Hi, I am a Car!</h2>;
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
   }
 }
 
-ReactDOM.render(<Car />, document.getElementById('root'));
-
+const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
