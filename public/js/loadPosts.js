@@ -50,8 +50,19 @@ const loadIndex = async () => {
     //Use posts to update HTML below...
     console.log(posts)
     for (var i = 0; i < posts.length; i++) {
+        // Display the title
         document.getElementById("post-title-"+i).innerHTML = posts[i].title;
+        // Display the first name and last name of the user
         document.getElementById("text-posted-by-someone-"+i).innerHTML = posts[i].firstName + " " + posts[i].lastName;
-        document.getElementById("post-"+i).innerHTML = posts[i].description;
+        // Display the description of the post. Limit the number of characters without cutting the words.
+        var description = posts[i].description;
+        var trimmedString = description.substr(0, 100);
+        if(description.length > trimmedString.length){
+            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+            document.getElementById("post-"+i).innerHTML = trimmedString + '...';
+        } else {
+            document.getElementById("post-"+i).innerHTML = description;
+        }
+        
     }
 }
