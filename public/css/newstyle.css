@@ -282,7 +282,7 @@ nav {
 }
 
 /* post TEXT */
-#post {
+.post {
     line-height: 1.3em;
     font-size: 0.8em;
     color: #202020;
