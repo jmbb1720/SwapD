@@ -1,6 +1,7 @@
 // select document then fetch
 //construct json object to be sent to app.post!
-const form = document.getElementById('form')
+const form = document.getElementById('submit-form')
+const thankyou = document.getElementById('thankyou-note')
 
 // TODO: handle submission
 form.addEventListener('submit', (e) => {
@@ -30,6 +31,10 @@ form.addEventListener('submit', (e) => {
         alert(error.message)
         console.log(error)
     })
+
+    form.style.visibility="hidden";
+    thankyou.style.display="block";
+    //alert("it works!");
 }
 
 )

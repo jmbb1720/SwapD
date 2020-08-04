@@ -19,7 +19,8 @@
             </div>
             <div class='signup-and-login-container'>
                 <button class='signup-and-login-button'><a id='sign-up' href="/register">Register</a></button>
-                <button class='signup-and-login-button' id="login-button"><a id='log-in' href="/login">Log In</a></button>
+                <button class='signup-and-login-button' id="login-button"><a id='log-in' href="/login">Log
+                        In</a></button>
             </div>
         </div>
     </div> <!-- top-bar -->
@@ -92,8 +93,7 @@
             <li id="home"><a href="">Other</a></li>
             <li id="home"><a href="">Get Started</a></li>
             <li id="submit-post">
-                <button class="submit-post-button"><a
-                        href="/submit">Submit Post</a></button>
+                <button class="submit-post-button"><a href="/submit">Submit Post</a></button>
             </li>
         </ul>
         <div class="burger">
@@ -104,8 +104,15 @@
     </nav>
     <script scr="/js/javascript.js"></script>
 
+    <style>
+        #thankyou-note {
+            display: none;
+        }
+    </style>
+    <div id="thankyou-note">Thank you for submitting your post!</div>
+
     <div class="zone section-under-nav grid-wrapper">
-        <form id="form" target="_blank">
+        <form id="submit-form" target="_blank">
             <label class="title" for="fname">First name:</label>
             <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br> <!-- first name -->
             <label class="title" for="lname">Last name:</label>
@@ -117,7 +124,8 @@
             <label class="title" for="post">Post title:</label>
             <input type="text" id="postTit" name="post" placeholder="Enter your post title"><br><br> <!-- post title -->
             <label class="title" for="desc">Description:</label><br><br>
-            <textarea rows="6" cols="100" name="comment" id="desc" form="usrform">Describe your post...</textarea><br><br>
+            <textarea rows="6" cols="100" name="comment" id="desc"
+                form="usrform">Describe your post...</textarea><br><br>
             <!-- description -->
             <label class="title" for="image">Image Upload:</label>
             <input type="file" name="fileToUpload" id="fileToUpload">
@@ -135,13 +143,14 @@
                     <option value="fashion">Fashion</option>
                     <option value="culinary">Culinary</option>
                     <option value="others">Others</option>
-                </div> <!-- category -->
+                    <!-- category -->
             </div><br></br>
             <label class="title" for="tags">Tags:</label>
             <input type="text" id="tags" name="tags" placeholder="Enter your tags"><br></br> <!-- tags -->
             <label class="title" for="verif">Verification:</label>
             <p id="verif">Please answer this question: When was Dickinson College founded?</p>
-            <input type="answer" id="answer" name="answer" placeholder="Enter your answer"><br></br> <!-- verification -->
+            <input type="answer" id="answer" name="answer" placeholder="Enter your answer"><br></br>
+            <!-- verification -->
             <input type="submit" value="Submit"><br></br> <!-- submit -->
         </form>
     </div> <!-- tile -->
