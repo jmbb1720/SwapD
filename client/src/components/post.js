@@ -22,7 +22,7 @@ class Post extends React.Component {
         </div>
         <div className="delete">
           <button
-            className="button-post1"
+            className="button-comment"
             onclick="document.getElementById('delete-confirmation').style.display='block'"
           >
             {" "}
@@ -34,7 +34,7 @@ class Post extends React.Component {
             <h3>Are you sure you want to delete your post?</h3>
             <div className="confirmation-button">
               <button
-                className="button-post1"
+                className="button-comment"
                 type="button"
                 onclick="document.getElementById('delete-confirmation').style.display='none'"
               >
@@ -42,7 +42,7 @@ class Post extends React.Component {
                 Cancel{" "}
               </button>
               <button
-                className="button-post1"
+                className="button-comment"
                 type="button"
                 onclick="document.getElementById('delete-confirmation').style.display='none'"
               >
@@ -54,7 +54,7 @@ class Post extends React.Component {
         </div>
         {}
         <div className="update">
-          <button className="button-post1" onclick="openPopup()">
+          <button className="button-comment" onclick="openPopup()">
             {" "}
             Update Post Test
           </button>
@@ -103,7 +103,7 @@ class Post extends React.Component {
             <input
               type="submit"
               defaultValue="Submit"
-              className="button-post1"
+              className="button-comment"
             />
             <br />
             <br />
@@ -122,7 +122,7 @@ class Post extends React.Component {
               <input type="text" name="comment" id="comment-space" />
             </div>
             <div className>
-              <input type="submit" className="button-post1" />
+              <input type="submit" className="button-comment" />
             </div>
           </form>
         </div>
@@ -171,7 +171,7 @@ class Post extends React.Component {
               <input
                 type="submit"
                 defaultValue="Reply"
-                className="button-post1"
+                className="button-comment"
               />
               <br />
               <br />
@@ -209,7 +209,7 @@ class Post extends React.Component {
               <input
                 type="submit"
                 defaultValue="Reply"
-                className="button-post1"
+                className="button-comment"
               />
               <br />
               <br />
@@ -235,7 +235,7 @@ class Post extends React.Component {
               <input
                 type="submit"
                 defaultValue="Reply"
-                className="button-post1"
+                className="button-comment"
               />
               <br />
               <br />
@@ -243,7 +243,7 @@ class Post extends React.Component {
           </div>
         </div>
         <a href="art-page.html">
-          <button className="button-post1">More in Art</button>{" "}
+          <button className="button-comment">More in Art</button>{" "}
         </a>
       </div>
     );

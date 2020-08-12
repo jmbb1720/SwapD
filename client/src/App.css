@@ -645,6 +645,18 @@ input[type=text], input[type=password] {
   margin-right: 10px;
 }
 
+/*STYLES FOR POST*/
+.big-post{
+  padding: 100px 100px 100px 100px;
+}
+
+.big-post img{
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media only screen and (max-width: 1024px) {
   .main-nav {
