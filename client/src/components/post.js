@@ -5,19 +5,10 @@ class Post extends React.Component {
     return (
       <div className="big-post">
         <div id="post-test1" className="post">
-          <img src="https://blog.traveloka.com/en/wp-content/uploads/sites/3/2019/05/iStock-683274236.jpg" />
-          <h1 className="post-title">Arts</h1>
-          <p>Posted on 21st November 2019 by Someone</p>
+          <img src="" />
+          <h1 className="post-title"></h1>
+          <p></p>
           <p className="post-content">
-            Art has long been recognized as an important part of a well-rounded
-            education -- but when it comes down to setting budget priorities,
-            the arts rarely rise to the top. Many public schools saw their
-            visual, performing and musical arts programs cut completely during
-            the last recession, despite the many studies showing that exposure
-            to the arts can help with academics too. A few schools are taking
-            the research to heart, weaving the arts into everything they do and
-            finding that the approach not only boosts academic achievement but
-            also promotes creativity, self-confidence and school pride.
           </p>
         </div>
         <div className="delete">

@@ -8,37 +8,21 @@ class Tennis extends React.Component {
           <div className="left-side-tile">
             <div className="big-box" id="big-box-top">
               <img
-                src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg"
+                src=""
                 width={250}
                 height={150}
               />
-              <h1>Tennis</h1>
+              <h1></h1>
               <div className="icon-text-posted-by-someone">
                 <img
                   className="icon-posted-by-someone"
                   src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
                 />
                 <p className="text-posted-by-someone">
-                  Posted on 21st November 2019 by Hoang
                 </p>
               </div>
-              <p id="post">Awesome lesson Contact: 66775508</p>
+              <p id="post"></p>
               <p id="post">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                tempus tincidunt porta. Fusce purus augue, fringilla et
-                hendrerit eu, semper eget lectus. Maecenas at felis tortor.
-                Vivamus porta, leo a lobortis placerat, est lorem tempor velit,
-                at commodo nisl neque sed magna. Aliquam erat volutpat. Sed at
-                pellentesque eros. Pellentesque faucibus condimentum ligula sit
-                amet imperdiet. Etiam sollicitudin, nisi eu sollicitudin
-                commodo, eros lectus tempus massa, sit amet convallis ipsum arcu
-                eu eros. Nunc malesuada dapibus nulla nec condimentum. Nulla
-                consectetur quam magna, at congue mauris rutrum rutrum. Mauris
-                vitae fermentum ante. Sed lobortis sit amet purus ac aliquam.
-                Quisque molestie faucibus tincidunt. Etiam porttitor, mauris id
-                facilisis fringilla, diam massa malesuada ante, eu luctus tortor
-                justo at justo. Proin eros velit, congue sit amet ligula at,
-                rutrum efficitur nulla.
               </p>
             </div>{" "}
             {}
@@ -58,21 +42,20 @@ class Tennis extends React.Component {
           <div className="right-side-tile">
             <div className="side-box" id="side-box-top">
               <img
-                src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg"
+                src=""
                 width={250}
                 height={150}
               />
-              <h1>Tennis</h1>
+              <h1></h1>
               <div className="icon-text-posted-by-someone">
                 <img
                   className="icon-posted-by-someone"
                   src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
                 />
                 <p className="text-posted-by-someone">
-                  Posted on 21st November 2019 by Hoang
                 </p>
               </div>
-              <p id="post">Awesome lesson Contact: 66775508</p>
+              <p id="post"></p>
               <a>
                 <img
                   className="icon-continue-reading"
@@ -83,21 +66,20 @@ class Tennis extends React.Component {
             {}
             <div className="side-box" id="side-box-bottom">
               <img
-                src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg"
+                src=""
                 width={250}
                 height={150}
               />
-              <h1>Tennis</h1>
+              <h1></h1>
               <div className="icon-text-posted-by-someone">
                 <img
                   className="icon-posted-by-someone"
                   src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
                 />
                 <p className="text-posted-by-someone">
-                  Posted on 21st November 2019 by Hoang
                 </p>
               </div>
-              <p id="post">Awesome lesson Contact: 66775508</p>
+              <p id="post"></p>
               <a>
                 <img
                   className="icon-continue-reading"

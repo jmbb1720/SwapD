@@ -7,19 +7,18 @@ class Arts_Studio extends React.Component {
         <div className="box tile">
           <img
             className="post-image"
-            src="https://images.unsplash.com/photo-1588441259691-b04ba5e4ddf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+            src=""
           />
-          <h1>Arts</h1>
+          <h1></h1>
           <div className="icon-text-posted-by-someone">
             <img
               className="icon-posted-by-someone"
               src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
             />
             <p className="text-posted-by-someone">
-              Posted on 21st November 2019 by Hoang
             </p>
           </div>
-          <p id="post">Come learn Arts!</p>
+          <p id="post"></p>
           {}
           <a>
             <img
