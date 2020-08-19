@@ -7,19 +7,18 @@ class Tech_Program extends React.Component {
         <div className="box tile">
           <img
             className="post-image"
-            src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/america.jpg"
+            src=""
           />
-          <h1>Java Lessons</h1>
+          <h1></h1>
           <div className="icon-text-posted-by-someone">
             <img
               className="icon-posted-by-someone"
               src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
             />
             <p className="text-posted-by-someone">
-              Posted on 21st November 2019 by Hoang
             </p>
           </div>
-          <p id="post">Come learn Java!</p>
+          <p id="post"></p>
           {}
           <a>
             <img
