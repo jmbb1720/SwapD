@@ -26,25 +26,21 @@ const loadPostsToPage = async () => {
 
     //in an async function, we use await to wait for the result of another async function
     //before continuing execution
-    const posts = await retrievePosts()
+    const posts = await retrievePosts();
 
     //Use posts to update HTML below...
+    //console.log("HALLOOOOOOO its working")
+    document.getElementById("title").innerHTML=posts[1].title;
+    //document.getElementById("createdAt").innerHTML=posts[1].createdAt;
+    document.getElementById("firstName").innerHTML=posts[1].firstName;
+    document.getElementById("lastName").innerHTML=posts[1].lastName;
+    document.getElementById("description").innerHTML=posts[1].description;
+
+    console.log(posts[1])
     console.log(posts)
 }
 
 const loadIndex = async () => {
-    //EXPLANATION:
-    //loadPostsToPage is an asynchronous function, so it will return a promise
-    //a promise specifies that the asynchronous function will return a needed value sometime in the future
-
-    //Read more about aysnchronous JS, Promises, and the async-await patterns here: 
-    // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-    //(most of the time, so we don't need to write promises on our own). But we need to know
-    //when a function returns a promise so we can handle it appropriately.
-
-    //in an async function, we use await to wait for the result of another async function
-    //before continuing execution
     const posts = await retrievePosts()
 
     //Use posts to update HTML below...
