@@ -41,19 +41,4 @@ const template = document.querySelector('template');
 const node = document.importNode(template.content, true);
 document.body.appendChild(node);
 
-$("#featured-tab").click(function(){
-    $(".tab").removeClass("active");
-    $("#featured-tab").addClass("active");
-    $('table tr > td:nth-child(2), table tr > th:nth-child(2)').hide();
-    $('table tr > td:nth-child(3), table tr > th:nth-child(3)').show();
-    $('table tr > td:nth-child(4), table tr > th:nth-child(4)').hide();           
-});
-
-$("#premium-tab").click(function(){
-    $(".tab").removeClass("active");
-    $("#premium-tab").addClass("active");
-    $('table tr > td:nth-child(2), table tr > th:nth-child(2)').hide();
-    $('table tr > td:nth-child(3), table tr > th:nth-child(3)').hide(); 
-    $('table tr > td:nth-child(4), table tr > th:nth-child(4)').show();                     
-});
 //document.getElementById('update-confirmation').style.display='block'
