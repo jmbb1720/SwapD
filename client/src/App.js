@@ -14,7 +14,8 @@ import Tech_Program from './components/tech_program';
 import User_Info from './components/user_info';
 import User_Info_Update from './components/user_info_update';
 import Post from './components/post';
-import './App.css';
+// import './App.css';
+import './mysass.scss';
 
 function App() {
   return (
