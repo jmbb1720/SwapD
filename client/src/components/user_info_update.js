@@ -1,4 +1,5 @@
 import React from "react";
+import './user_info_update.scss';
 
 class User_Info_Update extends React.Component {
   render() {

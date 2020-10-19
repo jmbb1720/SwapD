@@ -1,0 +1,87 @@
+.update-button-container {
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .update-button {
+    background-color: #c8102e; /* Dickinson's Red */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.0em;
+    cursor: pointer; 
+    margin-right: 10px;
+  }
+  
+  .update-button:hover {
+    opacity: 0.9;
+  }
+  
+  .icon-privacy-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon-privacy {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media only screen and (max-width: 1024px) {
+    .main-nav {
+        width: 90%;
+        }
+    }  
+  
+  @media only screen and (max-width: 800px) {
+      body {
+          overflow-x: hidden;
+      }
+  
+      .main-nav {
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 16vh;
+        width: 100%;
+        background-color: #202020;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transfrom 0.5s ease-in;
+    } 
+  
+    .main-nav li{
+        opacity: 0;
+    }
+  
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+  }
+  
+  .nav-active {
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade{
+      from{
+          opacity: 0;
+          transform: translateX(50px);
+      }
+      to{
+          opacity: 1;
+          transform: translateX(0px);
+      }
+  }

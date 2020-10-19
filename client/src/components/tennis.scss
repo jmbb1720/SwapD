@@ -1,0 +1,48 @@
+.tile-align {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .big-box {
+   background-color: white; 
+   padding: 20px 20px 20px 20px;
+   margin: 0px 30px 0px 0px;
+   transition: 1s;
+  }
+  
+  #big-box-top {
+    margin-bottom:30px;
+  }
+  
+  #big-box-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .side-box {
+    background-color: white; 
+    padding: 20px 20px 20px 20px;
+    transition: 1s;
+  }
+  
+  #side-box-top {
+    margin: 0px 0px 30px 0px;
+  }
+  
+  .button-comment {
+    height: 40px;
+    width: 140px;
+    background-color: #c8102e; /* Dickinson's Red */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 15px 0px 0px 0px;
+    cursor: pointer;    
+  }
+  
+  .button-comment:hover {
+    background-color: #b81c36;
+    color: black;
+  }

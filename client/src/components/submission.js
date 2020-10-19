@@ -2,6 +2,7 @@ import React from "react";
 import Nav_bar from "./nav_bar";
 import Top_bar from "./top_bar";
 import Footer from "./footer";
+import './submit.scss';
 
 class Submission extends React.Component {
     render() {
