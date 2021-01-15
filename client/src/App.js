@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Top_bar />
-        <Nav_bar />
+        {/* <Top_bar />
+        <Nav_bar /> */}
         <Switch>
           <Route path="/" exact component={() => <Home />} />
           <Route path="/register" exact component={() => <Register />} />
