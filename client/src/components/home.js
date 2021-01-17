@@ -34,7 +34,7 @@ class Thumbnail extends React.Component {
         const tempList = []
         list.forEach((post) => {
             console.log(post)
-            tempList.push({'value': post.title_lower, 'label': post.description})
+            tempList.push({'title': post.title_lower, 'desc': post.description})
         })
         this.setState({fullList: tempList.slice(0,1)})
     }
@@ -46,12 +46,13 @@ class Thumbnail extends React.Component {
     render() {
       return (
         // need redirection to thumbnail
+        // todo: update name from post data
         <div className="box tile">
           <img
             className="post-image"
             src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg"
           />
-          <h1>Tennis</h1>
+          {this.state.fullList.map(post => <h1 id="post">{post.title}</h1>)}
           <div className="icon-text-posted-by-someone">
             <img
               className="icon-posted-by-someone"
@@ -61,7 +62,7 @@ class Thumbnail extends React.Component {
               Posted on 21st November 2019 by Hoang
             </p>
           </div>
-          {this.state.fullList.map(post => <p id="post">{post.label}</p>)}
+          {this.state.fullList.map(post => <p id="post">{post.desc}</p>)}
           {}
           <RedirectLink/>
           {}
@@ -75,6 +76,13 @@ class Home extends React.Component {
   render() {
     return (
         <div className="zone section-under-nav grid-wrapper">
+          <Thumbnail/>
+          <Thumbnail/>
+          <Thumbnail/>
+          <Thumbnail/>
+          <Thumbnail/>
+          <Thumbnail/>
+          <Thumbnail/>
           <Thumbnail/>
         </div>
     /*         
