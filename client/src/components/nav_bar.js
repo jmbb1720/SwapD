@@ -13,7 +13,7 @@ class Nav_bar extends React.Component {
               {}
               <button className="drop-button">Arts</button>
               <div className="dropdown-content">
-                <a href="/post">Studio Art</a>
+                <a href="/arts-studio">Studio Art</a>
                 <a href="/arts-studio">Art History</a>
                 <a href="/arts-studio">Art Business</a>
               </div>

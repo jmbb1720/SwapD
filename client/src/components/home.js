@@ -50,7 +50,7 @@ class Thumbnail extends React.Component {
         <div className="box tile">
           <img
             className="post-image"
-            src="https://dsonskillshare.000webhostapp.com/wp-content/uploads/2019/11/Tennis.jpg"
+            src=""
           />
           {this.state.fullList.map(post => <h1 id="post">{post.title}</h1>)}
           <div className="icon-text-posted-by-someone">
@@ -59,7 +59,6 @@ class Thumbnail extends React.Component {
               src="https://image.flaticon.com/icons/svg/1717/1717787.svg"
             />
             <p className="text-posted-by-someone">
-              Posted on 21st November 2019 by Hoang
             </p>
           </div>
           {this.state.fullList.map(post => <p id="post">{post.desc}</p>)}
