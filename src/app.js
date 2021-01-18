@@ -1,5 +1,13 @@
 const path = require('path')
 const express = require('express')
+//const crypto = require('crypto')
+//const mongoose = require('mongoose')
+//const util = require("util");
+//const multer = require('multer');
+//const GridFsStorage = require('multer-gridfs-storage');
+/*const Grid = require('grisfs-stream');
+const methodOverride = require('method-override')*/
+
 require('../db/mongoose.js')
 const app = express()
 const port = process.env.PORT
@@ -16,6 +24,30 @@ app.use(express.json())
 app.use(express.static(publicDir))
 app.use(postRouter)
 app.use(userRouter)
+
+//image gfs
+/*var storage = new GridFsStorage({
+    url: "mongodb://localhost:27017/swapd-posts",
+    options: { useNewUrlParser: true, useUnifiedTopology: true },
+    file: (req, file) => {
+      const match = ["image/png", "image/jpeg"];
+  
+      if (match.indexOf(file.mimetype) === -1) {
+        const filename = `${Date.now()}-bezkoder-${file.originalname}`;
+        return filename;
+      }
+  
+      return {
+        bucketName: "photos",
+        filename: `${Date.now()}-bezkoder-${file.originalname}`
+      };
+    }
+  });
+  
+  var uploadFile = multer({ storage: storage }).single("file");
+  var uploadFilesMiddleware = util.promisify(uploadFile);
+  module.exports = uploadFilesMiddleware;
+  */
 
 app.get('/', (req, res) => {
     res.sendFile(viewsPath + '/index.html')
@@ -60,6 +92,32 @@ app.get('/user-info', (req, res) => {
 app.get('/user-info-update', (req, res) => {
     res.sendFile(viewsPath + '/user-info-update.html')
 })
+
+//server.js
+ 
+ 
+// SET STORAGE
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now())
+    }
+  })
+   
+  var upload = multer({ storage: storage })
+
+  app.post('/uploadfile', upload.single('file'), (req, res, next) => {
+    const file = req.file
+    if (!file) {
+      const error = new Error('Please upload a file')
+      error.httpStatusCode = 400
+      return next(error)
+    }
+      res.send(file)
+    
+  })
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
