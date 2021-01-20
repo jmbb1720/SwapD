@@ -15,6 +15,7 @@ form.addEventListener('submit', (e) => {
         description: document.getElementById('desc').value,
         category: document.getElementById('categories').value,
         tags: document.getElementById('tags').value,
+        image: document.getElementById('fileToUpload').value,
     }
 
     fetch('/posts', 

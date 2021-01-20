@@ -42,6 +42,10 @@ const postSchema = mongoose.Schema( {
     },
     tags: {
         type: String,
+    },
+    image: {
+        data: Buffer,
+        contentType: String,
     }
 }, {
     timestamps: true

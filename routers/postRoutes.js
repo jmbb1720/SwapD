@@ -1,5 +1,6 @@
 const express = require('express')
 const Post = require('../models/posts.js')
+const multer = require('multer');
 const router = new express.Router()
 
 router.post('/posts', async (req,res) => {
@@ -74,5 +75,28 @@ router.delete('/posts/:id', async (req, res) => {
         res.status(400).send(e)
     }
 })
+
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+ 
+var upload = multer({ storage: storage });
+
+router.get('/', (req, res) => {
+    Post.find({}, (err, items) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send('An error occurred', err);
+        }
+        else {
+            res.render('imagesPage', { items: items });
+        }
+    });
+});
 
 module.exports = router
