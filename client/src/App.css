@@ -238,6 +238,13 @@ width: 100%;
   width: 100%;
   }
 
+.user-profile-button-comment {
+  padding: 10px;
+  margin: 0px 15px 15px 0;
+  border: none;
+  cursor: pointer;
+}
+
 #user-profile {
   padding: 0;
   height: 20px;
@@ -354,10 +361,14 @@ width: 100%;
 }
 
 /*Comment box*/
+.user-icon-comment {
+  display: flex;
+}
+
 .comment-box {
   border: 2px solid black;
   padding: 20px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   margin: 20px;
 }
 
@@ -381,11 +392,11 @@ width: 100%;
 }
 
 .individual-comment {
-  background-color: lightcoral;
+  background-color: rgb(230, 157, 157);
   /*opacity: 50%;*/
   margin: 5px 0;
   /*border: 2px solid black;*/
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 20px;
 }
 
@@ -407,17 +418,17 @@ width: 100%;
 
 .individual-reply {
   margin-left: 50px;
-  background-color: lightpink;
+  background-color: rgb(218, 125, 125);
   padding-top: 10px;
   margin-top: 10px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 20px;
 }
 
 .reply-box {
   width: 80%;
   height: 40px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 10px;
   border: 1px solid black;
 }
@@ -425,7 +436,7 @@ width: 100%;
 .comment-reply .button-post1 {
   width: 15%;
   margin: 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /*Delete Post Button*/

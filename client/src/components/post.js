@@ -231,7 +231,14 @@ class Post extends React.Component {
         <div className="show-comment comment-box">
           <div id="comment_1" className="individual-comment">
             <div className="comment-name">
+            <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
               <span> This area is for name </span>
+            </div>
             </div>
             <div className="comment-main">
               Comment comment comment
@@ -239,7 +246,14 @@ class Post extends React.Component {
               Comment comment comment
               <div className="individual-reply">
                 <div className="comment-name">
-                  <span> This area is for name </span>
+                <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
+              <span> This area is for name </span>
+            </div>
                 </div>
                 <div className="comment-main comment-secondary">
                   Comment comment comment reply reply Reply
@@ -251,7 +265,14 @@ class Post extends React.Component {
               </div>
               <div className="individual-reply">
                 <div className="comment-name">
-                  <span> This area is for name </span>
+                <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
+              <span> This area is for name </span>
+            </div>
                 </div>
                 <div className="comment-main comment-secondary">
                   Comment comment comment reply reply Reply
@@ -281,7 +302,14 @@ class Post extends React.Component {
           </div>
           <div id="comment_2" className="individual-comment">
             <div className="comment-name">
+            <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
               <span> This area is for name </span>
+            </div>
             </div>
             <div className="comment-main">
               Comment comment comment
@@ -290,7 +318,14 @@ class Post extends React.Component {
             </div>
             <div className="individual-reply">
               <div className="comment-name">
-                <span> This area is for name </span>
+              <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
+              <span> This area is for name </span>
+            </div>
               </div>
               <div className="comment-main comment-secondary">
                 Comment comment comment reply reply Reply
@@ -319,7 +354,14 @@ class Post extends React.Component {
           </div>
           <div id="comment_2" className="individual-comment">
             <div className="comment-name">
+            <div class='user-icon-comment'>
+            <button class='user-profile-button-comment'>
+            <a id='sign-up' href="user-info">
+              <img id='user-profile' src="https://www.flaticon.com/svg/vstatic/svg/847/847969.svg?token=exp=1611499827~hmac=a1f18eef41c128adf06418e184fecab7"></img>
+            </a>
+          </button>
               <span> This area is for name </span>
+            </div>
             </div>
             <div className="comment-main">
               Comment comment comment
