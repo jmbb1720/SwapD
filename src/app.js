@@ -1,7 +1,18 @@
 const path = require('path')
 const express = require('express')
 const bodyParser= require('body-parser')
-const multer = require('multer');
+var multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+ 
+var upload = multer({ storage: storage });
 
 require('../db/mongoose.js')
 const app = express()
@@ -63,6 +74,27 @@ app.get('/user-info', (req, res) => {
 app.get('/user-info-update', (req, res) => {
     res.sendFile(viewsPath + '/user-info-update.html')
 })
+
+app.post('/', upload.single('fileToUpload'), (req, res, next) => {
+ 
+    var obj = {
+        name: req.body.name,
+        desc: req.body.desc,
+        img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+            contentType: 'image/png'
+        }
+    }
+    imgModel.create(obj, (err, item) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            // item.save();
+            res.redirect('/');
+        }
+    });
+});
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)

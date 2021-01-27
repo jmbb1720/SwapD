@@ -7,8 +7,8 @@ class Submission extends React.Component {
     render() {
         return (
             <div className="zone section-under-nav grid-wrapper">
-                <form id="form" target="_blank">
-                    <label className="title" htmlFor="fname">
+                <form id="form" /*target="_blank"*/>
+                    <label className="title" htmlFor="fname" encType="multipart/form-data">
                         First name:
           </label>
                     <input

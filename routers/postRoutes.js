@@ -76,27 +76,29 @@ router.delete('/posts/:id', async (req, res) => {
     }
 })
 
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
+// var storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'uploads')
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname + '-' + Date.now())
+//     }
+// });
  
-var upload = multer({ storage: storage });
+// var upload = multer({ storage: storage });
 
-router.get('/', (req, res) => {
-    Post.find({}, (err, items) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send('An error occurred', err);
-        }
-        else {
-            res.render('imagesPage', { items: items });
-        }
-    });
-});
+// router.get('/', (req, res) => {
+//     Post.find({}, (err, items) => {
+//         if (err) {
+//             console.log(err);
+//             res.status(500).send('An error occurred', err);
+//         }
+//         else {
+//             res.render('imagesPage', { items: items });
+//         }
+//     });
+// });
+
+
 
 module.exports = router
