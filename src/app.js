@@ -16,6 +16,7 @@ var upload = multer({ storage: storage });
 
 require('../db/mongoose.js')
 const app = express()
+const cors = require('cors');
 const port = process.env.PORT
 const postRouter = require('../routers/postRoutes.js')
 const userRouter = require('../routers/userRoutes.js')
@@ -24,6 +25,7 @@ const userRouter = require('../routers/userRoutes.js')
 const publicDir =  path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 
+app.use(cors())
 app.set('view engine', 'pug')
 app.set('views', viewsPath)
 app.use(express.json())

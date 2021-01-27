@@ -1,6 +1,6 @@
 const retrievePosts = async () => {
     try {
-        const response = await fetch('/posts',
+        const response = await fetch('http://localhost:3001/posts',
             {
                 method: 'get',
                 headers: { "Content-Type": "application/json" },
